@@ -765,6 +765,433 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                     }
                 }
         );
+        seekBarBronBiala.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+        seekBarBronPalna.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+        seekBarProwadzenie.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+        seekBarPrzetrwanie.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+        seekBarSkradanie.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+        seekBarWysportowanie.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
+        seekBarZlodziejstwwo.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
     ///ToDO reszta seekbarów zbindowac
 
 
