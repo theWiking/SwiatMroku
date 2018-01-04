@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wiking.swiatmroku.MainActivity">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/ButtonDodajKarte"
+            android:layout_width="300dp"
+            android:onClick="onDodajKarteClick"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="Dodaj Kartę"
+            />
+
+        <Button
+            android:id="@+id/ButtonPrzegladajKarty"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ButtonDodajKarte"
+            android:layout_centerHorizontal="true"
+            android:text="Przegladaj Karty"
+          />
+
+        <Button
+            android:id="@+id/ButtonEksportuj"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ButtonPrzegladajKarty"
+            android:layout_centerHorizontal="true"
+            android:text="Eksportuj"
+           />
+        <Button
+            android:id="@+id/ButtonImportuj"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ButtonEksportuj"
+            android:layout_centerHorizontal="true"
+            android:text="Importuj"
+            />
+        <Button
+            android:id="@+id/ButtonAboutGame"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@+id/ButtonImportuj"
+            android:layout_centerHorizontal="true"
+            android:text="O grze"
+            />
+
+        <Button
+            android:id="@+id/buttonAbout"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignStart="@+id/ButtonAboutGame"
+            android:layout_below="@+id/ButtonAboutGame"
+            android:text="About" />
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,413 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wiking.swiatmroku.DodajKarte$PlaceholderFragment">
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints">
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/textViewGrup1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="5/4/3"
+                android:textAlignment="center" />
+
+            <LinearLayout
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:id="@+id/RadioGrup1">
+                <RadioButton
+                    android:id="@+id/radioButtonGrup1_5"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:text="5" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonGrup1_4"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="4" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonGrup1_3"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="3" />
+</RadioGroup>
+            </LinearLayout>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAcentMoc">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Inteligencja" />
+
+            <SeekBar
+                android:id="@+id/seekBarInteligencja"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:backgroundTint="@android:color/black"
+                android:clickable="false"
+                android:max="5"
+                android:progress="1" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Czujność" />
+
+            <SeekBar
+                android:id="@+id/seekBarCzujnosc"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccentOdpornosc">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Determinacja" />
+
+            <SeekBar
+                android:id="@+id/seekBarDeterminacja"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/textViewGrup2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="5/4/3"
+                android:textAlignment="center" />
+            <LinearLayout
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/RadioGrup2">
+            <RadioButton
+                android:id="@+id/radioButtonGrup2_5"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5" />
+            <RadioButton
+                android:id="@+id/radioButtonGrup2_4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4" />
+            <RadioButton
+                android:id="@+id/radioButtonGrup2_3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3" />
+            </RadioGroup>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAcentMoc">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Siła" />
+
+            <SeekBar
+                android:id="@+id/seekBarSila"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Zreczność" />
+
+            <SeekBar
+                android:id="@+id/seekBarZrecznosc"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccentOdpornosc">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wytrzymałość" />
+
+            <SeekBar
+                android:id="@+id/seekBarWytrzymalosc"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/textViewGrup3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:text="5/4/3"
+                android:textAlignment="center" />
+            <LinearLayout
+                android:layout_width="190dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:id="@+id/RadioGrup3">
+            <RadioButton
+                android:id="@+id/radioButtonGrup3_5"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="5" />
+            <RadioButton
+                android:id="@+id/radioButtonGrup3_4"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="4" />
+            <RadioButton
+                android:id="@+id/radioButtonGrup3_3"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3" />
+            </RadioGroup>
+            </LinearLayout>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAcentMoc">
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Prezencja" />
+
+            <SeekBar
+                android:id="@+id/seekBarPrezencja"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccent">
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Manipulacja" />
+
+            <SeekBar
+                android:id="@+id/seekBarManipulacja"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorAccentOdpornosc">
+
+            <TextView
+                android:id="@+id/textNazwaGrupy"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Opanowanie" />
+
+            <SeekBar
+                android:id="@+id/seekBarOpanowanie"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/halfblack"
+                android:max="5"
+                android:progress="1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/textViewInfo"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Wybiesz głowna grupę przez radioButton\nsuma musi być 12  (5/4/3)\nNiebieskie-moc\nZielone-Finezja\nCzerwone-Odpornosc    "
+                android:textAlignment="center" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp">
+        <Button
+            android:id="@+id/buttonWalidujAtrybuty"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Waliduj RadioButtons"
+            android:textAlignment="center"
+            tools:ignore="MissingConstraints" />
+        </TableRow>
+    </TableLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
