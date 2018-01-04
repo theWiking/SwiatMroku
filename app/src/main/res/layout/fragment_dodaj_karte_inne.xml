@@ -1,215 +1,449 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.wiking.swiatmroku.DodajKarte$PlaceholderFragment">
-
     <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_height="wrap_content"
-            android:layout_width="0dip"
-            android:layout_weight="1"
-            android:text="Imię"
-           />
-         <EditText
-                android:id="@+id/editTextImie"
-                android:layout_height="wrap_content"
-                android:layout_width="100dip"
-                android:layout_weight="1"
 
-                android:layout_column="1"
-                android:inputType="textPersonName"
-               />
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="Atuty"
+                android:textSize="25dp"
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
-        <TextView
-        android:id="@+id/textView3"
-        android:layout_height="wrap_content"
-        android:layout_width="0dip"
-        android:layout_weight="1"
-        android:text="Wiek postaci"
-        />
-        <EditText
-            android:id="@+id/editTextWiek"
-            android:layout_height="wrap_content"
-            android:layout_width="100dip"
-            android:layout_weight="1"
 
-            android:layout_column="1"
-            android:inputType="textPersonName"
-          />
-    </TableRow>
+            <EditText
+                android:id="@+id/editTextAtut1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 1" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut1"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_height="wrap_content"
-            android:layout_width="0dip"
-            android:layout_weight="1"
-            android:text="Gracz"
-            />
-        <EditText
-            android:id="@+id/editTextGracz"
-            android:layout_height="wrap_content"
-            android:layout_width="100dip"
-            android:layout_weight="1"
 
-            android:layout_column="1"
-            android:inputType="textPersonName"
-            />
-    </TableRow>
+            <EditText
+                android:id="@+id/editTextAtut2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 2" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut2"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextAtut3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 3" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut3"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextAtut4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 4" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut4"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextAtut5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 5" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut5"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editTextAtut6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 6" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut6"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_height="wrap_content"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:text="Koncept"
-                />
-            <EditText
-                android:id="@+id/editTextKoncept"
-                android:layout_height="wrap_content"
-                android:layout_width="100dip"
-                android:layout_weight="1"
 
-                android:layout_column="1"
+            <EditText
+                android:id="@+id/editTextAtut7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
                 android:inputType="textPersonName"
-                 />
+                android:text="Atut 7" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut7"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextAtut8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 8" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut8"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextAtut9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Atut 9" />
+
+            <SeekBar
+                android:id="@+id/seekBarAtut9"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="100dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:max="5"
+                android:progress="0" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="Wady"
+                android:textSize="25dp"
+                android:textAlignment="center" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextWada1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Wada 1" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+
+            <EditText
+                android:id="@+id/editTextWada2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Wada 2" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextWada3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Wada 3" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="Broń"
+                android:textSize="25dp"
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"  >
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_height="wrap_content"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:text="Cnota"
-                />
-            <EditText
-                android:id="@+id/editTextCnota"
-                android:layout_height="wrap_content"
-                android:layout_width="100dip"
-                android:layout_weight="1"
+            android:layout_height="match_parent" >
 
-                android:layout_column="1"
+            <EditText
+                android:id="@+id/editTextBron1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="1"
                 android:inputType="textPersonName"
-                 />
+                android:text="Nazwa broni " />
+
+            <EditText
+                android:id="@+id/editTextBron1Mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextBron2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:text="Nazwa broni " />
+
+            <EditText
+                android:id="@+id/editTextBron2Mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <EditText
+                android:id="@+id/editTextBron3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="1"
+                android:inputType="textPersonName"
+                android:text="Nazwa broni " />
+
+            <EditText
+                android:id="@+id/editTextBron3Mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:layout_weight="1"
+                android:text="Wyposażenie"
+                android:textSize="25dp"
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"  >
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_height="wrap_content"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:text="Skaza"
-                />
-            <EditText
-                android:id="@+id/editTextSkaza"
-                android:layout_height="wrap_content"
-                android:layout_width="100dip"
-                android:layout_weight="1"
+            android:layout_height="match_parent" >
 
-                android:layout_column="1"
+            <EditText
+                android:id="@+id/editTextWyp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="1"
                 android:inputType="textPersonName"
-                 />
+                android:text="Nazwa broni " />
+
+            <EditText
+                android:id="@+id/editTextWyp1Mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"  >
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_height="wrap_content"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:text="Kronika"
-                />
+            android:layout_height="match_parent" >
+
             <EditText
-                android:id="@+id/editTextKronika"
+                android:id="@+id/editTextWyp2"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="100dip"
+                android:ems="10"
                 android:layout_weight="1"
-
-                android:layout_column="1"
                 android:inputType="textPersonName"
-                 />
-        </TableRow>
+                android:text="Nazwa broni " />
 
+            <EditText
+                android:id="@+id/editTextWyp2Mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
+        </TableRow>
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"  >
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_height="wrap_content"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:text="Frakcja"
-                />
+            android:layout_height="match_parent" >
+
             <EditText
-                android:id="@+id/editTextFrakcja"
+                android:id="@+id/editTextWyp3"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_width="100dip"
+                android:ems="10"
                 android:layout_weight="1"
-
-                android:layout_column="1"
                 android:inputType="textPersonName"
-                />
-        </TableRow>
+                android:text="Nazwa broni " />
 
+            <EditText
+                android:id="@+id/editTextWyp3Mod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="2"
+                android:inputType="number" />
+        </TableRow>
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"  >
-            <TextView
-                android:id="@+id/textNazwaGrupy"
-                android:layout_height="wrap_content"
-                android:layout_width="0dip"
-                android:layout_weight="1"
-                android:text="Nazwa Grupy"
-                />
-            <EditText
-                android:id="@+id/editTextNazwaGrupy"
-                android:layout_height="wrap_content"
-                android:layout_width="100dip"
-                android:layout_weight="1"
+            android:layout_height="match_parent" >
 
-                android:layout_column="1"
-                android:inputType="textPersonName"
-                 />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
         </TableRow>
     </TableLayout>
-
-
-
-</android.support.constraint.ConstraintLayout>
 </ScrollView>
