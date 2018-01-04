@@ -68,21 +68,21 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_dodaj_karte_umiejetnosci, container, false);
-      textViewGrupUM1 = (TextView) rootView.findViewById(R.id.textViewGrup1UM);
-        textViewGrupUM2 = (TextView) rootView.findViewById(R.id.textViewGrup2UM);
-        textViewGrupUM3 = (TextView) rootView.findViewById(R.id.textViewGrup3UM);
-        final RadioGroup radioGroup1 = (RadioGroup) rootView .findViewById(R.id.RadioGrupUmiejetnosci1);
-        final RadioGroup radioGroup2 = (RadioGroup) rootView .findViewById(R.id.RadioGrupUmiejetnosci2);
-        final RadioGroup radioGroup3 = (RadioGroup) rootView .findViewById(R.id.RadioGrupUmiejetnosci3);
-        listOfRadioButtons.add(radioButtonUM1_11 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM1_11));
-        listOfRadioButtons.add(radioButtonUM1_7 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM1_7));
-        listOfRadioButtons.add(radioButtonUM1_4 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM1_4));
-        listOfRadioButtons.add(radioButtonUM2_11 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM2_11));
-        listOfRadioButtons.add(radioButtonUM2_7 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM2_7));
-        listOfRadioButtons.add(radioButtonUM2_4 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM2_4));
-        listOfRadioButtons.add(radioButtonUM3_11 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM3_11));
-        listOfRadioButtons.add(radioButtonUM3_7= (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM3_7));
-        listOfRadioButtons.add(radioButtonUM3_4 = (RadioButton) rootView.findViewById(R.id.radioButtonGrupUM3_4));
+      textViewGrupUM1 =  rootView.findViewById(R.id.textViewGrup1UM);
+        textViewGrupUM2 =  rootView.findViewById(R.id.textViewGrup2UM);
+        textViewGrupUM3 =  rootView.findViewById(R.id.textViewGrup3UM);
+        final RadioGroup radioGroup1 =  rootView .findViewById(R.id.RadioGrupUmiejetnosci1);
+        final RadioGroup radioGroup2 =  rootView .findViewById(R.id.RadioGrupUmiejetnosci2);
+        final RadioGroup radioGroup3 = rootView .findViewById(R.id.RadioGrupUmiejetnosci3);
+        listOfRadioButtons.add(radioButtonUM1_11 = rootView.findViewById(R.id.radioButtonGrupUM1_11));
+        listOfRadioButtons.add(radioButtonUM1_7 =  rootView.findViewById(R.id.radioButtonGrupUM1_7));
+        listOfRadioButtons.add(radioButtonUM1_4 =  rootView.findViewById(R.id.radioButtonGrupUM1_4));
+        listOfRadioButtons.add(radioButtonUM2_11 = rootView.findViewById(R.id.radioButtonGrupUM2_11));
+        listOfRadioButtons.add(radioButtonUM2_7 = rootView.findViewById(R.id.radioButtonGrupUM2_7));
+        listOfRadioButtons.add(radioButtonUM2_4 =  rootView.findViewById(R.id.radioButtonGrupUM2_4));
+        listOfRadioButtons.add(radioButtonUM3_11 =  rootView.findViewById(R.id.radioButtonGrupUM3_11));
+        listOfRadioButtons.add(radioButtonUM3_7=  rootView.findViewById(R.id.radioButtonGrupUM3_7));
+        listOfRadioButtons.add(radioButtonUM3_4 =  rootView.findViewById(R.id.radioButtonGrupUM3_4));
 
         radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
@@ -704,7 +704,67 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                     }
                 }
         );
-        
+        seekBarBijatyka.setOnSeekBarChangeListener(
+                new SeekBar.OnSeekBarChangeListener(){
+
+                    int progresBefore=0;
+                    @Override
+                    public void onStopTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onStartTrackingTouch(SeekBar seekBar) {
+                        if(seekBar.getProgress()>=5)
+                            seekBar.setProgress(5);
+                        if(seekBar.getProgress()<=0)
+                            seekBar.setProgress(0);
+                    }
+
+                    @Override
+                    public void onProgressChanged(SeekBar seekBar, int progress,
+                                                  boolean fromUser)
+                    {
+
+
+
+                        if (progress < 0) {
+                            seekBar.setProgress(progress=0);
+
+                        }
+                        if(progress>5) {
+                            seekBar.setProgress(progress = 5);
+                            //textViewGrup1.setText(String.valueOf(textViewGrup1Value = textViewGrup1Value - progress + 1));
+                        }
+
+                        if(progresBefore<progress&&textViewGrup2ValueUM!=0){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM-=1));
+
+                            progresBefore=progress;
+                            seekBar.setProgress(progress=progresBefore);
+                        }
+                        else if(progresBefore>progress){
+                            textViewGrupUM2.setText(String.valueOf(textViewGrup2ValueUM+=1));
+                            progresBefore=progress;
+                        }
+                        if(progresBefore!=progress){
+                            seekBar.setProgress(progresBefore);
+                        }
+                        if(textViewGrup2ValueUM==0){
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
+                            correctAtributsSet[1]=true;
+                        }
+                        else{
+                            textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
+                            correctAtributsSet[1]=false;
+                        }
+                        //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
+                    }
+                }
+        );
     ///ToDO reszta seekbarów zbindowac
 
 
