@@ -406,7 +406,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="40dp">
 
             <Button
                 android:id="@+id/buttonWalidujAtrybuty"
@@ -416,6 +416,12 @@
                 android:text="Waliduj RadioButtons"
                 android:textAlignment="center"
                 tools:ignore="MissingConstraints" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp">
+
         </TableRow>
     </TableLayout>
 
