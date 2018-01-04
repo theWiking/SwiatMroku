@@ -3,44 +3,38 @@
     android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.wiking.swiatmroku.DodajKarte$PlaceholderFragment">
+    android:fillViewport="true"
+    >
 
     <TableLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
 
-               <TableRow
+        <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="10dp">
 
-                   <TextView
-                       android:id="@+id/textView"
-                       android:layout_width="157dp"
-                       android:layout_height="wrap_content"
-                       android:layout_weight="1"
-                       android:text="Umysłowe"
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="157dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Umysłowe"
 
-                       android:textSize="24sp" />
+                android:textSize="24sp" />
 
-                   <TextView
-                       android:id="@+id/textViewGrup1UM"
-                       android:layout_width="10dp"
-                       android:layout_height="match_parent"
-                       android:layout_marginTop="5dp"
-                       android:layout_weight="5"
-                       android:text="-"
-                       android:textAlignment="center" />
+            <TextView
+                android:id="@+id/textViewGrup1UM"
+                android:layout_width="10dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_weight="5"
+                android:text="-"
+                android:textAlignment="center" />
 
             <LinearLayout
                 android:layout_width="180dip"
@@ -270,6 +264,7 @@
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="122dp"
                 tools:layout_editor_absoluteY="0dp" />
+
             <TextView
                 android:id="@+id/textViewGrup2UM"
                 android:layout_width="10dp"
@@ -505,6 +500,7 @@
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="122dp"
                 tools:layout_editor_absoluteY="0dp" />
+
             <TextView
                 android:id="@+id/textViewGrup3UM"
                 android:layout_width="10dp"
@@ -722,6 +718,7 @@
                 android:max="5"
                 android:progress="0" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -735,10 +732,12 @@
                 android:text="Wybiesz głowna grupę przez radioButton\nsuma musi być 22  (11/7/4)\nUmysłowe niewyszkolone -3 reszta niewyszkolone -1"
                 android:textAlignment="center" />
         </TableRow>
+
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginBottom="20dp">
+
             <Button
                 android:id="@+id/buttonWalidujUmiejetnosci"
                 android:layout_width="0dip"
@@ -750,5 +749,5 @@
         </TableRow>
 
     </TableLayout>
-</android.support.constraint.ConstraintLayout>
+
 </ScrollView>
