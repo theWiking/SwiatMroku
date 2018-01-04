@@ -84,6 +84,8 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
         listOfRadioButtons.add(radioButtonUM3_7=  rootView.findViewById(R.id.radioButtonGrupUM3_7));
         listOfRadioButtons.add(radioButtonUM3_4 =  rootView.findViewById(R.id.radioButtonGrupUM3_4));
 
+
+
         radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {

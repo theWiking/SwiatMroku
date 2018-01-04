@@ -1,0 +1,2027 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.wiking.swiatmroku.DodajKarte2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Imię" />
+
+                <EditText
+                    android:id="@+id/editTextImie"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wiek postaci" />
+
+                <EditText
+                    android:id="@+id/editTextWiek"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gracz" />
+
+                <EditText
+                    android:id="@+id/editTextGracz"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Koncept" />
+
+                <EditText
+                    android:id="@+id/editTextKoncept"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cnota" />
+
+                <EditText
+                    android:id="@+id/editTextCnota"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Skaza" />
+
+                <EditText
+                    android:id="@+id/editTextSkaza"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kronika" />
+
+                <EditText
+                    android:id="@+id/editTextKronika"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Frakcja" />
+
+                <EditText
+                    android:id="@+id/editTextFrakcja"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp">
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textNazwaGrupy"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nazwa Grupy" />
+
+                <EditText
+                    android:id="@+id/editTextNazwaGrupy"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+
+                    android:layout_weight="1"
+                    android:inputType="textPersonName" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewGrup1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="5/4/3"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="190dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RadioGrup1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup1_5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:text="5" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup1_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup1_3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAcentMoc">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Inteligencja" />
+
+                <SeekBar
+                    android:id="@+id/seekBarInteligencja"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:backgroundTint="@android:color/black"
+                    android:clickable="false"
+                    android:max="5"
+                    android:progress="1" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Czujność" />
+
+                <SeekBar
+                    android:id="@+id/seekBarCzujnosc"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccentOdpornosc">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Determinacja" />
+
+                <SeekBar
+                    android:id="@+id/seekBarDeterminacja"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewGrup2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="5/4/3"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="190dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RadioGrup2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup2_5"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="5" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup2_4"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup2_3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3" />
+                    </RadioGroup>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAcentMoc">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Siła" />
+
+                <SeekBar
+                    android:id="@+id/seekBarSila"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zreczność" />
+
+                <SeekBar
+                    android:id="@+id/seekBarZrecznosc"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccentOdpornosc">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wytrzymałość" />
+
+                <SeekBar
+                    android:id="@+id/seekBarWytrzymalosc"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewGrup3"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:text="5/4/3"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="190dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RadioGrup3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup3_5"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="5" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup3_4"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrup3_3"
+                            android:layout_width="0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="3" />
+                    </RadioGroup>
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAcentMoc">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Prezencja" />
+
+                <SeekBar
+                    android:id="@+id/seekBarPrezencja"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccent">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Manipulacja" />
+
+                <SeekBar
+                    android:id="@+id/seekBarManipulacja"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorAccentOdpornosc">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Opanowanie" />
+
+                <SeekBar
+                    android:id="@+id/seekBarOpanowanie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/halfblack"
+                    android:max="5"
+                    android:progress="1" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="20dp"></TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewInfo"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wybiesz głowna grupę przez radioButton\nsuma musi być 12  (5/4/3)\nNiebieskie-moc\nZielone-Finezja\nCzerwone-Odpornosc    "
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp">
+
+                <Button
+                    android:id="@+id/buttonWalidujAtrybuty"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Waliduj RadioButtons"
+                    android:textAlignment="center"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp">
+
+            </TableRow>
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="157dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Umysłowe"
+
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/textViewGrup1UM"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="5"
+                    android:text="-"
+                    android:textAlignment="center" />
+
+                <LinearLayout
+                    android:layout_width="180dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RadioGrupUmiejetnosci1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM1_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:text="11" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM1_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM1_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dedukcja" />
+
+                <SeekBar
+                    android:id="@+id/seekBarDedukcja"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Informatyka" />
+
+                <SeekBar
+                    android:id="@+id/seekBarInformatyka"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Medycyna" />
+
+                <SeekBar
+                    android:id="@+id/seekBarMedycyna"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nauka" />
+
+                <SeekBar
+                    android:id="@+id/seekBarNauka"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Okultyzm" />
+
+                <SeekBar
+                    android:id="@+id/seekBarOkultyzm"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Polityka" />
+
+                <SeekBar
+                    android:id="@+id/seekBarPolityka"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rzemiosło" />
+
+                <SeekBar
+                    android:id="@+id/seekBarRzemioslo"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wyksztalcenie" />
+
+                <SeekBar
+                    android:id="@+id/seekBarWyksztalcenie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fizyczne"
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="122dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:id="@+id/textViewGrup2UM"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="5"
+                    android:text="-"
+                    android:textAlignment="center" />
+
+
+                <LinearLayout
+                    android:layout_width="180dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RadioGrupUmiejetnosci2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM2_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:text="11" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM2_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM2_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView101"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Bijatyka" />
+
+                <SeekBar
+                    android:id="@+id/seekBarBijatyka"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textView111"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Broń Biała" />
+
+                <SeekBar
+                    android:id="@+id/seekBarBronBiala"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Broń Palna" />
+
+                <SeekBar
+                    android:id="@+id/seekBarBornPalna"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Prowadzenie" />
+
+                <SeekBar
+                    android:id="@+id/seekBarProwadzenie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Przetrwanie" />
+
+                <SeekBar
+                    android:id="@+id/seekBarPrzetrwanie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Skradanie się" />
+
+                <SeekBar
+                    android:id="@+id/seekBarSkradanie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wysportowanie" />
+
+                <SeekBar
+                    android:id="@+id/seekBarWysportowanie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Złodziejstwo" />
+
+                <SeekBar
+                    android:id="@+id/seekBarZlodziejstwo"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewSpoleczne"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Społeczne"
+
+                    android:textSize="24sp"
+                    tools:layout_editor_absoluteX="122dp"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <TextView
+                    android:id="@+id/textViewGrup3UM"
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="5"
+                    android:text="-"
+                    android:textAlignment="center" />
+
+
+                <LinearLayout
+                    android:layout_width="180dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RadioGrupUmiejetnosci3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM3_11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+
+                            android:text="11" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM3_7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="7" />
+
+                        <RadioButton
+                            android:id="@+id/radioButtonGrupUM3_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="4" />
+                    </RadioGroup>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Ekspresja" />
+
+                <SeekBar
+                    android:id="@+id/seekBarEkspresja"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Empatia" />
+
+                <SeekBar
+                    android:id="@+id/seekBarEmpatia"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Obycie" />
+
+                <SeekBar
+                    android:id="@+id/seekBarObycie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oszustwo" />
+
+                <SeekBar
+                    android:id="@+id/seekBarOszustwo"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Perswazja" />
+
+                <SeekBar
+                    android:id="@+id/seekBarPerswazja"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Półświatek" />
+
+                <SeekBar
+                    android:id="@+id/seekBarPolswiatek"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zastraszanie" />
+
+                <SeekBar
+                    android:id="@+id/seekBarZastraszanie"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Zwierzęta" />
+
+                <SeekBar
+                    android:id="@+id/seekBarZwierzeta"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/textViewInfo1"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wybiesz głowna grupę przez radioButton\nsuma musi być 22  (11/7/4)\nUmysłowe niewyszkolone -3 reszta niewyszkolone -1"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp">
+
+                <Button
+                    android:id="@+id/buttonWalidujUmiejetnosci"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Waliduj RadioButtons"
+                    android:textAlignment="center"
+                    tools:ignore="MissingConstraints" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="40dp">
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:text="Atuty"
+                    android:textSize="25dp"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 1" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut1"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 2" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut2"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 3" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut3"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 4" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut4"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 5" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut5"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <EditText
+                    android:id="@+id/editTextAtut6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 6" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut6"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 7" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut7"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 8" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut8"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextAtut9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Atut 9" />
+
+                <SeekBar
+                    android:id="@+id/seekBarAtut9"
+                    style="@style/Widget.AppCompat.SeekBar.Discrete"
+                    android:layout_width="100dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:max="5"
+                    android:progress="0" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/wadytextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:text="Wady"
+                    android:textSize="25dp"
+                    android:textAlignment="center" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextWada1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Wada 1" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+
+                <EditText
+                    android:id="@+id/editTextWada2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Wada 2" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextWada3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:hint="Wada 3" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:text="Broń"
+                    android:textSize="25dp"
+                    />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:text="Mod"
+                    android:textSize="25dp"
+                    android:textAlignment="textEnd" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextBron1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="Nazwa broni " />
+
+                <EditText
+                    android:id="@+id/editTextBron1Mod"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="2"
+                    android:inputType="number" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextBron2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="Nazwa broni " />
+
+                <EditText
+                    android:id="@+id/editTextBron2Mod"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+
+                    android:ems="2"
+                    android:inputType="number" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextBron3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="Nazwa broni " />
+
+                <EditText
+                    android:id="@+id/editTextBron3Mod"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="2"
+                    android:inputType="number" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:text="Wyposażenie"
+                    android:textSize="25dp"
+                    />
+
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_span="2"
+                    android:layout_weight="1"
+                    android:text="Mod"
+                    android:textSize="25dp"
+                    android:textAlignment="textEnd" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextWyp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="Nazwa broni " />
+
+                <EditText
+                    android:id="@+id/editTextWyp1Mod"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="2"
+                    android:inputType="number" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextWyp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="Nazwa broni " />
+
+                <EditText
+                    android:id="@+id/editTextWyp2Mod"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="2"
+                    android:inputType="number" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editTextWyp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_weight="1"
+                    android:inputType="textPersonName"
+                    android:hint="Nazwa broni " />
+
+                <EditText
+                    android:id="@+id/editTextWyp3Mod"
+                    android:layout_width="0dip"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:ems="2"
+                    android:inputType="number" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp">
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_weight="1"
+                    android:text="Zdrowie"
+                    android:textSize="25dp"
+                    />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Siła Woli"
+                    android:textAlignment="textEnd"
+                    android:textSize="25dp" />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <EditText
+                    android:id="@+id/editText11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="    " />
+
+                <EditText
+                    android:id="@+id/editText1245"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:inputType="number" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Szybkość"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextSzybkosc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rozmiar"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextRozmiar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Inicjatywa"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextInicjatywa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Obrona"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextObrona"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pancerz"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextPancerz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Doswiadczenie"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextDoswiadczenie"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:inputType="number"
+                    />
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Moralność"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/editTextMoralnosc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:ems="10"
+                    android:inputType="number"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp">
+                <Button
+                    android:id="@+id/buttonDodaj_Karte_doBazy"
+                    android:layout_width="0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dodaj Kartę do bazy"
+                    android:textAlignment="center"
+
+                    tools:ignore="MissingConstraints" />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp">
+
+            </TableRow>
+        </TableLayout>
+
+
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

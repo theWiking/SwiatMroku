@@ -76,6 +76,9 @@ public class Dodaj_Karte_Atrybuty extends Fragment implements SeekBar.OnSeekBarC
                 listOfRadioButtons.add(radioButton3_4 = (RadioButton) rootView.findViewById(R.id.radioButtonGrup3_4));
                 listOfRadioButtons.add(radioButton3_3 = (RadioButton) rootView.findViewById(R.id.radioButtonGrup3_3));
 
+
+
+
             radioGroup1.setOnCheckedChangeListener(new OnCheckedChangeListener()
             {
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -777,6 +780,9 @@ public class Dodaj_Karte_Atrybuty extends Fragment implements SeekBar.OnSeekBarC
                     }
                 }
             });
+
+
+
 
 
 

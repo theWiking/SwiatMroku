@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onDodajKarteClick(View view){
         Intent dodajKarteClick;
-        dodajKarteClick=new Intent(this,DodajKarte.class);
+        dodajKarteClick=new Intent(this,DodajKarte2.class);
         startActivity(dodajKarteClick);
 
 
