@@ -62,31 +62,31 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
     private RadioButton radioButtonUM3_11;
     private RadioButton radioButtonUM3_7;
     private RadioButton radioButtonUM3_4;
-    private List<RadioButton> listOfRadioButtons=new ArrayList<RadioButton>();
-    private List<SeekBar> listOfSeekBars = new ArrayList<SeekBar>();
-    private Button waliduj;
+    private List<RadioButton> listOfRadioButtonsUM=new ArrayList<RadioButton>();
+    private List<SeekBar> listOfSeekBarsUM = new ArrayList<SeekBar>();
+    private Button walidujUmiejetnosci;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.fragment_dodaj_karte_umiejetnosci, container, false);
-      textViewGrupUM1 =  rootView.findViewById(R.id.textViewGrup1UM);
+        textViewGrupUM1 =  rootView.findViewById(R.id.textViewGrup1UM);
         textViewGrupUM2 =  rootView.findViewById(R.id.textViewGrup2UM);
         textViewGrupUM3 =  rootView.findViewById(R.id.textViewGrup3UM);
-        final RadioGroup radioGroup1 =  rootView .findViewById(R.id.RadioGrupUmiejetnosci1);
-        final RadioGroup radioGroup2 =  rootView .findViewById(R.id.RadioGrupUmiejetnosci2);
-        final RadioGroup radioGroup3 = rootView .findViewById(R.id.RadioGrupUmiejetnosci3);
-        listOfRadioButtons.add(radioButtonUM1_11 = rootView.findViewById(R.id.radioButtonGrupUM1_11));
-        listOfRadioButtons.add(radioButtonUM1_7 =  rootView.findViewById(R.id.radioButtonGrupUM1_7));
-        listOfRadioButtons.add(radioButtonUM1_4 =  rootView.findViewById(R.id.radioButtonGrupUM1_4));
-        listOfRadioButtons.add(radioButtonUM2_11 = rootView.findViewById(R.id.radioButtonGrupUM2_11));
-        listOfRadioButtons.add(radioButtonUM2_7 = rootView.findViewById(R.id.radioButtonGrupUM2_7));
-        listOfRadioButtons.add(radioButtonUM2_4 =  rootView.findViewById(R.id.radioButtonGrupUM2_4));
-        listOfRadioButtons.add(radioButtonUM3_11 =  rootView.findViewById(R.id.radioButtonGrupUM3_11));
-        listOfRadioButtons.add(radioButtonUM3_7=  rootView.findViewById(R.id.radioButtonGrupUM3_7));
-        listOfRadioButtons.add(radioButtonUM3_4 =  rootView.findViewById(R.id.radioButtonGrupUM3_4));
+        final RadioGroup radioGroup1UM =  rootView .findViewById(R.id.RadioGrupUmiejetnosci1);
+        final RadioGroup radioGroup2UM =  rootView .findViewById(R.id.RadioGrupUmiejetnosci2);
+        final RadioGroup radioGroup3UM = rootView .findViewById(R.id.RadioGrupUmiejetnosci3);
+        listOfRadioButtonsUM.add(radioButtonUM1_11 = rootView.findViewById(R.id.radioButtonGrupUM1_11));
+        listOfRadioButtonsUM.add(radioButtonUM1_7 =  rootView.findViewById(R.id.radioButtonGrupUM1_7));
+        listOfRadioButtonsUM.add(radioButtonUM1_4 =  rootView.findViewById(R.id.radioButtonGrupUM1_4));
+        listOfRadioButtonsUM.add(radioButtonUM2_11 = rootView.findViewById(R.id.radioButtonGrupUM2_11));
+        listOfRadioButtonsUM.add(radioButtonUM2_7 = rootView.findViewById(R.id.radioButtonGrupUM2_7));
+        listOfRadioButtonsUM.add(radioButtonUM2_4 =  rootView.findViewById(R.id.radioButtonGrupUM2_4));
+        listOfRadioButtonsUM.add(radioButtonUM3_11 =  rootView.findViewById(R.id.radioButtonGrupUM3_11));
+        listOfRadioButtonsUM.add(radioButtonUM3_7=  rootView.findViewById(R.id.radioButtonGrupUM3_7));
+        listOfRadioButtonsUM.add(radioButtonUM3_4 =  rootView.findViewById(R.id.radioButtonGrupUM3_4));
 
 
 
-        radioGroup1.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        radioGroup1UM.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // checkedId is the RadioButton selected
@@ -116,7 +116,7 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                 }
             }
         });
-        radioGroup2.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        radioGroup2UM.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // checkedId is the RadioButton selected
@@ -147,7 +147,7 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
             }
         });
 
-        radioGroup3.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
+        radioGroup3UM.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
         {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 // checkedId is the RadioButton selected
@@ -179,43 +179,43 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
         });
 
 
-        listOfSeekBars.add(seekBarDedukcja=rootView.findViewById(R.id.seekBarDedukcja));
-        listOfSeekBars.add(seekBarInformatyka=rootView.findViewById(R.id.seekBarInformatyka));
-        listOfSeekBars.add(seekBarMedycyna=rootView.findViewById(R.id.seekBarMedycyna));
-        listOfSeekBars.add(seekBarMedycyna=rootView.findViewById(R.id.seekBarMedycyna));
-        listOfSeekBars.add(seekBarNauka=rootView.findViewById(R.id.seekBarNauka));
-        listOfSeekBars.add(seekBarOkultyzm=rootView.findViewById(R.id.seekBarOkultyzm));
-        listOfSeekBars.add(seekBarPolityka=rootView.findViewById(R.id.seekBarPolityka));
-        listOfSeekBars.add(seekBarRzemioslo=rootView.findViewById(R.id.seekBarRzemioslo));
-        listOfSeekBars.add(seekBarWyksztalcenie=rootView.findViewById(R.id.seekBarWyksztalcenie));
+        listOfSeekBarsUM.add(seekBarDedukcja=rootView.findViewById(R.id.seekBarDedukcja));
+        listOfSeekBarsUM.add(seekBarInformatyka=rootView.findViewById(R.id.seekBarInformatyka));
+        listOfSeekBarsUM.add(seekBarMedycyna=rootView.findViewById(R.id.seekBarMedycyna));
+        listOfSeekBarsUM.add(seekBarMedycyna=rootView.findViewById(R.id.seekBarMedycyna));
+        listOfSeekBarsUM.add(seekBarNauka=rootView.findViewById(R.id.seekBarNauka));
+        listOfSeekBarsUM.add(seekBarOkultyzm=rootView.findViewById(R.id.seekBarOkultyzm));
+        listOfSeekBarsUM.add(seekBarPolityka=rootView.findViewById(R.id.seekBarPolityka));
+        listOfSeekBarsUM.add(seekBarRzemioslo=rootView.findViewById(R.id.seekBarRzemioslo));
+        listOfSeekBarsUM.add(seekBarWyksztalcenie=rootView.findViewById(R.id.seekBarWyksztalcenie));
 
-        listOfSeekBars.add(seekBarBijatyka=rootView.findViewById(R.id.seekBarBijatyka));
-        listOfSeekBars.add(seekBarBronBiala=rootView.findViewById(R.id.seekBarBronBiala));
-        listOfSeekBars.add(seekBarBronPalna=rootView.findViewById(R.id.seekBarBornPalna));
-        listOfSeekBars.add(seekBarProwadzenie=rootView.findViewById(R.id.seekBarProwadzenie));
-        listOfSeekBars.add(seekBarPrzetrwanie=rootView.findViewById(R.id.seekBarPrzetrwanie));
-        listOfSeekBars.add(seekBarSkradanie=rootView.findViewById(R.id.seekBarSkradanie));
-        listOfSeekBars.add(seekBarWysportowanie=rootView.findViewById(R.id.seekBarWysportowanie));
-        listOfSeekBars.add(seekBarZlodziejstwwo=rootView.findViewById(R.id.seekBarZlodziejstwo));
+        listOfSeekBarsUM.add(seekBarBijatyka=rootView.findViewById(R.id.seekBarBijatyka));
+        listOfSeekBarsUM.add(seekBarBronBiala=rootView.findViewById(R.id.seekBarBronBiala));
+        listOfSeekBarsUM.add(seekBarBronPalna=rootView.findViewById(R.id.seekBarBornPalna));
+        listOfSeekBarsUM.add(seekBarProwadzenie=rootView.findViewById(R.id.seekBarProwadzenie));
+        listOfSeekBarsUM.add(seekBarPrzetrwanie=rootView.findViewById(R.id.seekBarPrzetrwanie));
+        listOfSeekBarsUM.add(seekBarSkradanie=rootView.findViewById(R.id.seekBarSkradanie));
+        listOfSeekBarsUM.add(seekBarWysportowanie=rootView.findViewById(R.id.seekBarWysportowanie));
+        listOfSeekBarsUM.add(seekBarZlodziejstwwo=rootView.findViewById(R.id.seekBarZlodziejstwo));
 
-        listOfSeekBars.add(seekBarEspresja=rootView.findViewById(R.id.seekBarEkspresja));
-        listOfSeekBars.add(seekBarEmpatia=rootView.findViewById(R.id.seekBarEmpatia));
-        listOfSeekBars.add(seekBarObycie=rootView.findViewById(R.id.seekBarObycie));
-        listOfSeekBars.add(seekBarOszustwo=rootView.findViewById(R.id.seekBarOszustwo));
-        listOfSeekBars.add(seekBarPerswazja=rootView.findViewById(R.id.seekBarPerswazja));
-        listOfSeekBars.add(seekBarPolswiatek=rootView.findViewById(R.id.seekBarPolswiatek));
-        listOfSeekBars.add(seekBarZastraszenie=rootView.findViewById(R.id.seekBarZastraszanie));
-        listOfSeekBars.add(seekBarZwierzeta=rootView.findViewById(R.id.seekBarZwierzeta));
+        listOfSeekBarsUM.add(seekBarEspresja=rootView.findViewById(R.id.seekBarEkspresja));
+        listOfSeekBarsUM.add(seekBarEmpatia=rootView.findViewById(R.id.seekBarEmpatia));
+        listOfSeekBarsUM.add(seekBarObycie=rootView.findViewById(R.id.seekBarObycie));
+        listOfSeekBarsUM.add(seekBarOszustwo=rootView.findViewById(R.id.seekBarOszustwo));
+        listOfSeekBarsUM.add(seekBarPerswazja=rootView.findViewById(R.id.seekBarPerswazja));
+        listOfSeekBarsUM.add(seekBarPolswiatek=rootView.findViewById(R.id.seekBarPolswiatek));
+        listOfSeekBarsUM.add(seekBarZastraszenie=rootView.findViewById(R.id.seekBarZastraszanie));
+        listOfSeekBarsUM.add(seekBarZwierzeta=rootView.findViewById(R.id.seekBarZwierzeta));
 
         ///TO-DO reszta seekbarów;
 
 
-        for (SeekBar bar:listOfSeekBars) {
+        for (SeekBar bar:listOfSeekBarsUM) {
             bar.setEnabled(false);
 
         }
 
-        final boolean[] correctAtributsSet= new boolean[]{false,false,false};
+        final boolean[] correctSkillsSet= new boolean[]{false,false,false};
         seekBarDedukcja.setOnSeekBarChangeListener(
                 new SeekBar.OnSeekBarChangeListener(){
 
@@ -267,11 +267,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -330,11 +330,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -391,11 +391,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -452,11 +452,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -513,11 +513,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -574,11 +574,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -635,11 +635,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -696,11 +696,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup1ValueUM==0){
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[0]=true;
+                            correctSkillsSet[0]=true;
                         }
                         else{
                             textViewGrupUM1.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[0]=false;
+                            correctSkillsSet[0]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -757,11 +757,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -818,11 +818,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -879,11 +879,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -940,11 +940,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1001,11 +1001,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1062,11 +1062,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1123,11 +1123,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1184,11 +1184,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup2ValueUM==0){
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[1]=true;
+                            correctSkillsSet[1]=true;
                         }
                         else{
                             textViewGrupUM2.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[1]=false;
+                            correctSkillsSet[1]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1246,11 +1246,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1307,11 +1307,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1368,11 +1368,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1429,11 +1429,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1490,11 +1490,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1551,11 +1551,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1612,11 +1612,11 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
@@ -1673,17 +1673,17 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
                         }
                         if(textViewGrup3ValueUM==0){
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#3300FF00"));
-                            correctAtributsSet[2]=true;
+                            correctSkillsSet[2]=true;
                         }
                         else{
                             textViewGrupUM3.setBackgroundColor(Color.parseColor("#FFFF5555"));
-                            correctAtributsSet[2]=false;
+                            correctSkillsSet[2]=false;
                         }
                         //  Toast.makeText(rootView.getContext(),textViewGrup1.getText().toString()+"",Toast.LENGTH_LONG).show();
                     }
                 }
         );
-    ///ToDO reszta seekbarów zbindowac
+        ///ToDO reszta seekbarów zbindowac
 
 
 
@@ -1691,32 +1691,32 @@ public class Dodaj_Karte_Umiejetnosci extends Fragment {
 /*
 */
 
-        waliduj=(Button) rootView.findViewById(R.id.buttonWalidujUmiejetnosci);
-        waliduj.setOnClickListener(new View.OnClickListener() {
+        walidujUmiejetnosci=(Button) rootView.findViewById(R.id.buttonWalidujUmiejetnosci);
+        walidujUmiejetnosci.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int w=textViewGrup1ValueUM+textViewGrup2ValueUM+textViewGrup3ValueUM;
                 if((w==0||w==22)&&(radioButtonUM1_11.isEnabled()))//&&!radioButtonUM2_11.isEnabled()&&!radioButtonUM3_11.isEnabled())||(!radioButtonUM1_11.isEnabled()&&radioButtonUM2_11.isEnabled()&&!radioButtonUM3_11.isEnabled())||(!radioButtonUM1_11.isEnabled()&&!radioButtonUM2_11.isEnabled()&&radioButtonUM3_11.isEnabled())){
                 {
-                    for (RadioButton radio:listOfRadioButtons) {
+                    for (RadioButton radio:listOfRadioButtonsUM) {
                         radio.setEnabled(false);
                     }
-                    for (SeekBar bar:listOfSeekBars) {
+                    for (SeekBar bar:listOfSeekBarsUM) {
                         bar.setEnabled(true);
 
                     }
-                    waliduj.setText("Odblokuj");
+                    walidujUmiejetnosci.setText("Odblokuj");
                     Toast.makeText(rootView.getContext(),"Zablokowane"+w,Toast.LENGTH_LONG).show();
                 }
                 else {
-                    for (RadioButton radio:listOfRadioButtons) {
+                    for (RadioButton radio:listOfRadioButtonsUM) {
                         radio.setEnabled(true);
                     }
-                    for (SeekBar bar:listOfSeekBars) {
+                    for (SeekBar bar:listOfSeekBarsUM) {
                         bar.setEnabled(false);
 
                     }
-                    waliduj.setText("Waliduj radiobuttons");
+                    walidujUmiejetnosci.setText("Waliduj radiobuttons");
                     Toast.makeText(rootView.getContext(),"NIeZablokowane:"+w,Toast.LENGTH_LONG).show();
                 }
             }
