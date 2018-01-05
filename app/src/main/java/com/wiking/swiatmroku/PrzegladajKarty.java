@@ -25,7 +25,8 @@ public class PrzegladajKarty extends AppCompatActivity {
         final MySQLiteHelper db = new MySQLiteHelper(this);
         IloscKartWBazie=(rootView.findViewById(R.id.IloscKartWBazie));
         int q=db.iloscKPwBazie();
+        KartaPostaci kartaPostaci=db.getKP(db.iloscKPwBazie()-1);
         Log.i("testy","IloscKart w bazie "+q);
-       // IloscKartWBazie.setText(db.iloscKPwBazie());
+        IloscKartWBazie.setText(q+" "+kartaPostaci.getImie());
     }
 }

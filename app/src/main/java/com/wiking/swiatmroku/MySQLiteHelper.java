@@ -45,7 +45,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         String CREATE_KP_TABLE = "CREATE TABLE IF NOT EXISTS table_KP ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "imie TEXT, wiek TEXT, gracz TEXT,koncept TEXT,cnota TEXT,skaza TEXT,kronika TEXT,frakcja TEXT,nazwaGrupy TEXT," +
-                "inteligencja INTEGER,czujnosc INTEGER,determinacja INTEGER,sila INTEGER,zrecznosc INTEGER,wytrzymalosc INTEGER,prezentacja INTEGER,manipulacja INTEGER,opanowanie INTEGER" +
+                "inteligencja INTEGER,czujnosc INTEGER,determinacja INTEGER,sila INTEGER,zrecznosc INTEGER,wytrzymalosc INTEGER,prezentacja INTEGER,manipulacja INTEGER,opanowanie INTEGER," +
                 "dedukcja INTEGER,informatyka INTEGER,medycyna INTEGER,nauka INTEGER,okultyzm INTEGER,polityka INTEGER,rzemioslo INTEGER,wyksztalcenie INTEGER," +
                 "bijatyka INTEGER,bronBiala INTEGER,bronPalna INTEGER,prowadzenie INTEGER,przetrwanie INTEGER,skradanie INTEGER,wysportowanie INTEGER,zlodziejstwo INTEGER," +
                 "ekspresja INTEGER,empatia INTEGER,obycie INTEGER,oszustwo INTEGER,preswazja INTEGER,polswiate INTEGER,zatraszanie INTEGER,zwierzeta INTEGER," +
@@ -509,8 +509,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         Cursor cursor =db.rawQuery(sqlQuery,null);
 
         int counter=0;
-        return  counter = cursor.getCount();
-        /*
+
         if(cursor.getCount()>0){
             cursor.moveToFirst();
             counter=cursor.getInt(0);
@@ -519,6 +518,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
             counter=999;
         }
         cursor.close();
-        return counter;*/
+        return counter;
     }
 }
