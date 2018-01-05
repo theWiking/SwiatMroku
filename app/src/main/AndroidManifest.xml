@@ -20,7 +20,8 @@
             android:name=".DodajKarte"
             android:label="@string/title_activity_dodaj_karte"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".DodajKarte2"></activity>
+        <activity android:name=".DodajKarte2" />
+        <activity android:name=".PrzegladajKarty"></activity>
     </application>
 
 </manifest>

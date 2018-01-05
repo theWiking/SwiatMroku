@@ -159,6 +159,9 @@ public class DodajKarte2 extends AppCompatActivity {
 
     private Button dodajKarteDoBazy;
     private KartaPostaci KARTA_POSTACI = new KartaPostaci();
+
+
+    SQLiteDatabase mDatabase;
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -180,7 +183,7 @@ public class DodajKarte2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodaj_karte2);
         final View rootView = getWindow().getDecorView().getRootView();
-
+        Log.i("testy","startAPP");
 
         textViewGrup1 = (TextView) rootView.findViewById(R.id.textViewGrup1);
         textViewGrup2 = (TextView) rootView.findViewById(R.id.textViewGrup2);
@@ -2558,9 +2561,10 @@ public class DodajKarte2 extends AppCompatActivity {
                 }
             }
         });
-        SQLiteDatabase mDatabase = openOrCreateDatabase("db_card", SQLiteDatabase.OPEN_READWRITE, null);
+        mDatabase = openOrCreateDatabase("db_card", SQLiteDatabase.OPEN_READWRITE, null);
         mDatabase.setLocale(Locale.getDefault());
-        final MySQLiteHelper db = new MySQLiteHelper(this);
+        final MySQLiteHelper db = new MySQLiteHelper(rootView.getContext());
+
         dodajKarteDoBazy = rootView.findViewById(R.id.buttonDodaj_Karte_doBazy);
         dodajKarteDoBazy.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2568,77 +2572,8 @@ public class DodajKarte2 extends AppCompatActivity {
                 //TO-DO z danych dodać
                 //TODO na koncu przeniesc to do poprawnego klikniecia
 
-                imie=((EditText) rootView.findViewById(R.id.editTextImie)).getText().toString();
-                wiek=((EditText) rootView.findViewById(R.id.editTextWiek)).getText().toString();
-                gracz=((EditText) rootView.findViewById(R.id.editTextGracz)).getText().toString();
-
-                koncept=((EditText) rootView.findViewById(R.id.editTextKoncept)).getText().toString();
-                cnota=((EditText) rootView.findViewById(R.id.editTextCnota)).getText().toString();
-                skaza=((EditText) rootView.findViewById(R.id.editTextSkaza)).getText().toString();
-
-                kronika=((EditText) rootView.findViewById(R.id.editTextKronika)).getText().toString();
-                frakcja=((EditText) rootView.findViewById(R.id.editTextFrakcja)).getText().toString();
-                nazwaGrupy=((EditText) rootView.findViewById(R.id.editTextNazwaGrupy)).getText().toString();
-
-                ///INNE
-                Atut1=((EditText) rootView.findViewById(R.id.editTextAtut1)).getText().toString();
-                Atut2=((EditText) rootView.findViewById(R.id.editTextAtut2)).getText().toString();
-                Atut3=((EditText) rootView.findViewById(R.id.editTextAtut3)).getText().toString();
-                Atut4=((EditText) rootView.findViewById(R.id.editTextAtut4)).getText().toString();
-                Atut5=((EditText) rootView.findViewById(R.id.editTextAtut5)).getText().toString();
-                Atut6=((EditText) rootView.findViewById(R.id.editTextAtut6)).getText().toString();
-                Atut7=((EditText) rootView.findViewById(R.id.editTextAtut7)).getText().toString();
-                Atut8=((EditText) rootView.findViewById(R.id.editTextAtut8)).getText().toString();
-                Atut9=((EditText) rootView.findViewById(R.id.editTextAtut9)).getText().toString();
-
-                Atut1Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut1)).getProgress();
-                Atut2Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut2)).getProgress();
-                Atut3Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut3)).getProgress();
-                Atut4Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut4)).getProgress();
-                Atut5Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut5)).getProgress();
-                Atut6Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut6)).getProgress();
-                Atut7Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut7)).getProgress();
-                Atut8Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut8)).getProgress();
-                Atut9Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut9)).getProgress();
-
-                Wady1=((EditText) rootView.findViewById(R.id.editTextWada1)).getText().toString();
-                Wady2=((EditText) rootView.findViewById(R.id.editTextWada2)).getText().toString();
-                Wady3=((EditText) rootView.findViewById(R.id.editTextWada3)).getText().toString();
-                rozmiar=((EditText) rootView.findViewById(R.id.editTextRozmiar)).getText().toString();
-                szybkosc=((EditText) rootView.findViewById(R.id.editTextSzybkosc)).getText().toString();
-                inicjatywa=((EditText)rootView.findViewById(R.id.editTextInicjatywa)).getText().toString();
-                obrona=((EditText)rootView.findViewById(R.id.editTextObrona)).getText().toString();
-                pancerz=((EditText)rootView.findViewById(R.id.editTextPancerz)).getText().toString();
 
 
-                Bron1=((EditText)rootView.findViewById(R.id.editTextBron1)).getText().toString();
-                Bron2=((EditText)rootView.findViewById(R.id.editTextBron2)).getText().toString();
-                Bron3=((EditText)rootView.findViewById(R.id.editTextBron3)).getText().toString();
-                Wyp1=((EditText)rootView.findViewById(R.id.editTextWyp1)).getText().toString();
-                Wyp2=((EditText)rootView.findViewById(R.id.editTextWyp2)).getText().toString();
-                Wyp3=((EditText)rootView.findViewById(R.id.editTextWyp3)).getText().toString();
-                doswiadczenie=Integer.valueOf(((EditText) rootView.findViewById(R.id.editTextDoswiadczenie)).getText().toString());
-              zdrowie=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextZdrowie)).getText().toString());
-               silaWoli=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextSilaWoli)).getText().toString());
-              moralnosc=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextMoralnosc)).getText().toString());
-
-                BronMod1=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron1Mod)).getText().toString());
-                BronMod2=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron2Mod)).getText().toString());
-                BronMod3=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron3Mod)).getText().toString());
-                WypMod1=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp1Mod)).getText().toString());
-                WypMod2=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp2Mod)).getText().toString());
-                WypMod3=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp3Mod)).getText().toString());
-
-
-
-
-
-                //Todo z umiejetnosci
-                //Todo z atrybutow
-
-//Todo do karty postaci
-                KARTA_POSTACI.setImie(imie);
-                KARTA_POSTACI.setGracz(gracz);
 
 
                 if(correctAtributsSet[0]&&correctAtributsSet[1]&&correctAtributsSet[2]&&
@@ -2646,11 +2581,168 @@ public class DodajKarte2 extends AppCompatActivity {
 
                    //TODO na koncu przeniesc wszystko co powyzej
 
-                  //  db.addKP(KARTA_POSTACI);
-                    Toast.makeText(rootView.getContext(),"Dodan "+Atut1,Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(rootView.getContext(),"Nieudane "+Atut1,Toast.LENGTH_SHORT).show();
+
+                    imie=((EditText) rootView.findViewById(R.id.editTextImie)).getText().toString();
+                    wiek=((EditText) rootView.findViewById(R.id.editTextWiek)).getText().toString();
+                    gracz=((EditText) rootView.findViewById(R.id.editTextGracz)).getText().toString();
+
+                    koncept=((EditText) rootView.findViewById(R.id.editTextKoncept)).getText().toString();
+                    cnota=((EditText) rootView.findViewById(R.id.editTextCnota)).getText().toString();
+                    skaza=((EditText) rootView.findViewById(R.id.editTextSkaza)).getText().toString();
+
+                    kronika=((EditText) rootView.findViewById(R.id.editTextKronika)).getText().toString();
+                    frakcja=((EditText) rootView.findViewById(R.id.editTextFrakcja)).getText().toString();
+                    nazwaGrupy=((EditText) rootView.findViewById(R.id.editTextNazwaGrupy)).getText().toString();
+
+                    ///INNE
+                    Atut1=((EditText) rootView.findViewById(R.id.editTextAtut1)).getText().toString();
+                    Atut2=((EditText) rootView.findViewById(R.id.editTextAtut2)).getText().toString();
+                    Atut3=((EditText) rootView.findViewById(R.id.editTextAtut3)).getText().toString();
+                    Atut4=((EditText) rootView.findViewById(R.id.editTextAtut4)).getText().toString();
+                    Atut5=((EditText) rootView.findViewById(R.id.editTextAtut5)).getText().toString();
+                    Atut6=((EditText) rootView.findViewById(R.id.editTextAtut6)).getText().toString();
+                    Atut7=((EditText) rootView.findViewById(R.id.editTextAtut7)).getText().toString();
+                    Atut8=((EditText) rootView.findViewById(R.id.editTextAtut8)).getText().toString();
+                    Atut9=((EditText) rootView.findViewById(R.id.editTextAtut9)).getText().toString();
+
+                    Atut1Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut1)).getProgress();
+                    Atut2Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut2)).getProgress();
+                    Atut3Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut3)).getProgress();
+                    Atut4Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut4)).getProgress();
+                    Atut5Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut5)).getProgress();
+                    Atut6Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut6)).getProgress();
+                    Atut7Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut7)).getProgress();
+                    Atut8Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut8)).getProgress();
+                    Atut9Val=((SeekBar)rootView.findViewById(R.id.seekBarAtut9)).getProgress();
+
+                    Wady1=((EditText) rootView.findViewById(R.id.editTextWada1)).getText().toString();
+                    Wady2=((EditText) rootView.findViewById(R.id.editTextWada2)).getText().toString();
+                    Wady3=((EditText) rootView.findViewById(R.id.editTextWada3)).getText().toString();
+
+                    rozmiar=((EditText) rootView.findViewById(R.id.editTextRozmiar)).getText().toString();
+                    szybkosc=((EditText) rootView.findViewById(R.id.editTextSzybkosc)).getText().toString();
+                    inicjatywa=((EditText)rootView.findViewById(R.id.editTextInicjatywa)).getText().toString();
+                    obrona=((EditText)rootView.findViewById(R.id.editTextObrona)).getText().toString();
+                    pancerz=((EditText)rootView.findViewById(R.id.editTextPancerz)).getText().toString();
+
+
+                    Bron1=((EditText)rootView.findViewById(R.id.editTextBron1)).getText().toString();
+                    Bron2=((EditText)rootView.findViewById(R.id.editTextBron2)).getText().toString();
+                    Bron3=((EditText)rootView.findViewById(R.id.editTextBron3)).getText().toString();
+                    Wyp1=((EditText)rootView.findViewById(R.id.editTextWyp1)).getText().toString();
+                    Wyp2=((EditText)rootView.findViewById(R.id.editTextWyp2)).getText().toString();
+                    Wyp3=((EditText)rootView.findViewById(R.id.editTextWyp3)).getText().toString();
+                    doswiadczenie=Integer.valueOf(((EditText) rootView.findViewById(R.id.editTextDoswiadczenie)).getText().toString());
+                    zdrowie=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextZdrowie)).getText().toString());
+                    silaWoli=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextSilaWoli)).getText().toString());
+                    moralnosc=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextMoralnosc)).getText().toString());
+
+                    BronMod1=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron1Mod)).getText().toString());
+                    BronMod2=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron2Mod)).getText().toString());
+                    BronMod3=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron3Mod)).getText().toString());
+                    WypMod1=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp1Mod)).getText().toString());
+                    WypMod2=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp2Mod)).getText().toString());
+                    WypMod3=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp3Mod)).getText().toString());
+
+
+
+
+
+
+                    KARTA_POSTACI.setImie(imie);
+                    KARTA_POSTACI.setGracz(gracz);
+                    KARTA_POSTACI.setWiek(wiek);
+                    KARTA_POSTACI.setKoncept(koncept);
+                    KARTA_POSTACI.setCnota(cnota);
+                    KARTA_POSTACI.setSkaza(skaza);
+                    KARTA_POSTACI.setKronika(kronika);
+                    KARTA_POSTACI.setFrakcja(frakcja);
+                    KARTA_POSTACI.setNazwaGrupy(nazwaGrupy);
+                    KARTA_POSTACI.setAt1Nazwa(Atut1);
+                    KARTA_POSTACI.setAt2Nazwa(Atut2);
+                    KARTA_POSTACI.setAt3Nazwa(Atut3);
+                    KARTA_POSTACI.setAt4Nazwa(Atut4);
+                    KARTA_POSTACI.setAt5Nazwa(Atut5);
+                    KARTA_POSTACI.setAt6Nazwa(Atut6);
+                    KARTA_POSTACI.setAt7Nazwa(Atut7);
+                    KARTA_POSTACI.setAt8Nazwa(Atut8);
+                    KARTA_POSTACI.setAt9Nazwa(Atut9);
+                    KARTA_POSTACI.setAt1Wartosc(Atut1Val);
+                    KARTA_POSTACI.setAt2Wartosc(Atut2Val);
+                    KARTA_POSTACI.setAt3Wartosc(Atut3Val);
+                    KARTA_POSTACI.setAt4Wartosc(Atut4Val);
+                    KARTA_POSTACI.setAt5Wartosc(Atut5Val);
+                    KARTA_POSTACI.setAt6Wartosc(Atut6Val);
+                    KARTA_POSTACI.setAt7Wartosc(Atut7Val);
+                    KARTA_POSTACI.setAt8Wartosc(Atut8Val);
+                    KARTA_POSTACI.setAt9Wartosc(Atut9Val);
+                    KARTA_POSTACI.setWada1Nazwa(Wady1);
+                    KARTA_POSTACI.setWada2Nazwa(Wady2);
+                    KARTA_POSTACI.setWada3Nazwa(Wady3);
+                    KARTA_POSTACI.setRozmiar(rozmiar);
+                    KARTA_POSTACI.setSzybkosc(szybkosc);
+                    KARTA_POSTACI.setInicjatywa(inicjatywa);
+                    KARTA_POSTACI.setObrona(obrona);
+                    KARTA_POSTACI.setPancerz(pancerz);
+                    KARTA_POSTACI.setDoswiadczenie(doswiadczenie);
+                    KARTA_POSTACI.setBron1Nazwa(Bron1);
+                    KARTA_POSTACI.setBron2Nazwa(Bron2);
+                    KARTA_POSTACI.setBron3Nazwa(Bron3);
+                    KARTA_POSTACI.setBron1Mod(BronMod1);
+                    KARTA_POSTACI.setBron2Mod(BronMod2);
+                    KARTA_POSTACI.setBron3Mod(BronMod3);
+                    KARTA_POSTACI.setWyp1Nazwa(Wyp1);
+                    KARTA_POSTACI.setWyp2Nazwa(Wyp2);
+                    KARTA_POSTACI.setWyp3Nazwa(Wyp3);
+                    KARTA_POSTACI.setWyp1Mod(WypMod1);
+                    KARTA_POSTACI.setWyp2Mod(WypMod2);
+                    KARTA_POSTACI.setWyp3Mod(WypMod3);
+
+                    KARTA_POSTACI.setDedukcja(((SeekBar)rootView.findViewById(R.id.seekBarDedukcja)).getProgress());
+                    KARTA_POSTACI.setInformatyka(((SeekBar)rootView.findViewById(R.id.seekBarInformatyka)).getProgress());
+                    KARTA_POSTACI.setMedycyna(((SeekBar)rootView.findViewById(R.id.seekBarMedycyna)).getProgress());
+                    KARTA_POSTACI.setNauka(((SeekBar)rootView.findViewById(R.id.seekBarNauka)).getProgress());
+                    KARTA_POSTACI.setOkultyzm(((SeekBar)rootView.findViewById(R.id.seekBarOkultyzm)).getProgress());
+                    KARTA_POSTACI.setPolityka(((SeekBar)rootView.findViewById(R.id.seekBarPolityka)).getProgress());
+                    KARTA_POSTACI.setRzemioslo(((SeekBar)rootView.findViewById(R.id.seekBarRzemioslo)).getProgress());
+                    KARTA_POSTACI.setWyksztalcenie(((SeekBar)rootView.findViewById(R.id.seekBarWyksztalcenie)).getProgress());
+                    KARTA_POSTACI.setBijatyka(((SeekBar)rootView.findViewById(R.id.seekBarBijatyka)).getProgress());
+                    KARTA_POSTACI.setBronPalna(((SeekBar)rootView.findViewById(R.id.seekBarBornPalna)).getProgress());
+                    KARTA_POSTACI.setBronBiala(((SeekBar)rootView.findViewById(R.id.seekBarBronBiala)).getProgress());
+                    KARTA_POSTACI.setProwadzenie(((SeekBar)rootView.findViewById(R.id.seekBarProwadzenie)).getProgress());
+                    KARTA_POSTACI.setPrzetrwanie(((SeekBar)rootView.findViewById(R.id.seekBarPrzetrwanie)).getProgress());
+                    KARTA_POSTACI.setSkradanie(((SeekBar)rootView.findViewById(R.id.seekBarSkradanie)).getProgress());
+                    KARTA_POSTACI.setWysportowanie(((SeekBar)rootView.findViewById(R.id.seekBarWysportowanie)).getProgress());
+                    KARTA_POSTACI.setZlodziejstwo(((SeekBar)rootView.findViewById(R.id.seekBarZlodziejstwo)).getProgress());
+                    KARTA_POSTACI.setEkspresja(((SeekBar)rootView.findViewById(R.id.seekBarEkspresja)).getProgress());
+                    KARTA_POSTACI.setEmpatia(((SeekBar)rootView.findViewById(R.id.seekBarEmpatia)).getProgress());
+                    KARTA_POSTACI.setObycie(((SeekBar)rootView.findViewById(R.id.seekBarObycie)).getProgress());
+                    KARTA_POSTACI.setOszustwo(((SeekBar)rootView.findViewById(R.id.seekBarOszustwo)).getProgress());
+                    KARTA_POSTACI.setPreswazja(((SeekBar)rootView.findViewById(R.id.seekBarPerswazja)).getProgress());
+                    KARTA_POSTACI.setPolswiate(((SeekBar)rootView.findViewById(R.id.seekBarPolswiatek)).getProgress());
+                    KARTA_POSTACI.setZatraszanie(((SeekBar)rootView.findViewById(R.id.seekBarZastraszanie)).getProgress());
+                    KARTA_POSTACI.setZwierzeta(((SeekBar)rootView.findViewById(R.id.seekBarZwierzeta)).getProgress());
+
+                    KARTA_POSTACI.setInteligencja(((SeekBar) rootView.findViewById(R.id.seekBarInteligencja)).getProgress());
+                    KARTA_POSTACI.setCzujnosc(((SeekBar) rootView.findViewById(R.id.seekBarCzujnosc)).getProgress());
+                    KARTA_POSTACI.setDeterminacja(((SeekBar) rootView.findViewById(R.id.seekBarDeterminacja)).getProgress());
+                    KARTA_POSTACI.setSila(((SeekBar) rootView.findViewById(R.id.seekBarSila)).getProgress());
+                    KARTA_POSTACI.setZrecznosc(((SeekBar) rootView.findViewById(R.id.seekBarZrecznosc)).getProgress());
+                    KARTA_POSTACI.setWytrzymalosc(((SeekBar) rootView.findViewById(R.id.seekBarWytrzymalosc)).getProgress());
+                    KARTA_POSTACI.setPrezentacja(((SeekBar) rootView.findViewById(R.id.seekBarPrezencja)).getProgress());
+                    KARTA_POSTACI.setManipulacja(((SeekBar) rootView.findViewById(R.id.seekBarManipulacja)).getProgress());
+                    KARTA_POSTACI.setOpanowanie(((SeekBar) rootView.findViewById(R.id.seekBarOpanowanie)).getProgress());
+
+                    //Log.i("testy", "Przed "+ db.iloscKPwBazie());
+
+                     db.addKP(KARTA_POSTACI);
+                    Log.i("testy", "Po "+ db.iloscKPwBazie());
+                   // KartaPostaci kp =db.getKP(0);
+                    //Log.i("testy","Imie z bazy danyc:"+kp.getImie()+".");
+                    Toast.makeText(rootView.getContext(),"addKP "+ db.iloscKPwBazie(),Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(rootView.getContext(),"Nieudane "+Atut1,Toast.LENGTH_SHORT).show();
                 }
             }
         });

@@ -19,7 +19,7 @@ import java.util.List;
 public class MySQLiteHelper extends SQLiteOpenHelper {
     //Statyczne klasy
     private  static final String columns[] = {"id", "imie", "wiek","gracz","koncept","cnota","skaza","kronika","frakcja","nazwaGrupy",
-            "inteligencja","czujnosc","determinacja","sila","zrecznosc","wytrzymalosc","prezentacja","manipulacja",
+            "inteligencja","czujnosc","determinacja","sila","zrecznosc","wytrzymalosc","prezentacja","manipulacja","opanowanie",
             "dedukcja","informatyka","medycyna","nauka","okultyzm","polityka","rzemioslo","wyksztalcenie",
             "bijatyka","bronBiala","bronPalna","prowadzenie","przetrwanie","skradanie","wysportowanie","zlodziejstwo",
             "ekspresja","empatia","obycie","oszustwo","preswazja","polswiate","zatraszanie","zwierzeta",
@@ -42,10 +42,10 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         // SQL statement to create book table
-        String CREATE_KP_TABLE = "CREATE TABLE table_KP ( " +
+        String CREATE_KP_TABLE = "CREATE TABLE IF NOT EXISTS table_KP ( " +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "imie TEXT, wiek TEXT, gracz TEXT,koncept TEXT,cnota TEXT,skaza TEXT,kronika TEXT,frakcja TEXT,nazwaGrupy TEXT," +
-                "inteligencja INTEGER,czujnosc INTEGER,determinacja INTEGER,sila INTEGER,zrecznosc INTEGER,wytrzymalosc INTEGER,prezentacja INTEGER,manipulacja INTEGER," +
+                "inteligencja INTEGER,czujnosc INTEGER,determinacja INTEGER,sila INTEGER,zrecznosc INTEGER,wytrzymalosc INTEGER,prezentacja INTEGER,manipulacja INTEGER,opanowanie INTEGER" +
                 "dedukcja INTEGER,informatyka INTEGER,medycyna INTEGER,nauka INTEGER,okultyzm INTEGER,polityka INTEGER,rzemioslo INTEGER,wyksztalcenie INTEGER," +
                 "bijatyka INTEGER,bronBiala INTEGER,bronPalna INTEGER,prowadzenie INTEGER,przetrwanie INTEGER,skradanie INTEGER,wysportowanie INTEGER,zlodziejstwo INTEGER," +
                 "ekspresja INTEGER,empatia INTEGER,obycie INTEGER,oszustwo INTEGER,preswazja INTEGER,polswiate INTEGER,zatraszanie INTEGER,zwierzeta INTEGER," +
@@ -54,7 +54,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "wada1Nazwa TEXT,wada2Nazwa TEXT,wada3Nazwa TEXT,wada4Nazwa TEXT,wada1Wartosc ,wada2Wartosc,wada3Wartosc,wada4Wartosc," +
                 "rozmiar TEXT,szybkosc TEXT,inicjatywa TEXT,obrona TEXT,pancerz TEXT,zdrowieMax INTEGER ,silaWoliMax INTEGER ,zdrowie INTEGER,silaWoli INTEGER,doswiadczenie INTEGER,moralnosc INTEGER," +
                 "bron1Nazwa TEXT,bron2Nazwa TEXT,bron3Nazwa TEXT,bron1Mod INTEGER,bron2Mod INTEGER,bron3Mod INTEGER," +
-                "wyp1Nazwa TEXT,wyp2Nazwa TEXT,wyp3Nazwa TEXT,wyp1Mod INTEGER,wyp2Mod INTEGER,wyp3Mod INTEGER,author TEXT )";
+                "wyp1Nazwa TEXT,wyp2Nazwa TEXT,wyp3Nazwa TEXT,wyp1Mod INTEGER,wyp2Mod INTEGER,wyp3Mod INTEGER );";
 
         // create books table
         db.execSQL(CREATE_KP_TABLE);
@@ -70,7 +70,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     }
     public void addKP(KartaPostaci KP){
         //for logging
-        Log.d("addKP", KP.toString());
+
 
         // 1. get reference to writable DB
         SQLiteDatabase db = this.getWritableDatabase();
@@ -96,95 +96,98 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         values.put(columns[15], KP.getWytrzymalosc());
         values.put(columns[16], KP.getPreswazja());
         values.put(columns[17], KP.getManipulacja());
+        values.put(columns[18], KP.getOpanowanie());
 
-        values.put(columns[18], KP.getDedukcja());
-        values.put(columns[19], KP.getInformatyka());
-        values.put(columns[20], KP.getMedycyna());
-        values.put(columns[21], KP.getNauka());
-        values.put(columns[22], KP.getOkultyzm());
-        values.put(columns[23], KP.getPolityka());
-        values.put(columns[24], KP.getRzemioslo());
-        values.put(columns[25], KP.getWyksztalcenie());
+        values.put(columns[19], KP.getDedukcja());
+        values.put(columns[20], KP.getInformatyka());
+        values.put(columns[21], KP.getMedycyna());
+        values.put(columns[22], KP.getNauka());
+        values.put(columns[23], KP.getOkultyzm());
+        values.put(columns[24], KP.getPolityka());
+        values.put(columns[25], KP.getRzemioslo());
+        values.put(columns[26], KP.getWyksztalcenie());
 
-        values.put(columns[26], KP.getBijatyka());
-        values.put(columns[27], KP.getBronBiala());
-        values.put(columns[28], KP.getBronPalna());
-        values.put(columns[29], KP.getProwadzenie());
-        values.put(columns[30], KP.getPrzetrwanie());
-        values.put(columns[31], KP.getSkradanie());
-        values.put(columns[32], KP.getWysportowanie());
-        values.put(columns[33], KP.getZlodziejstwo());
+        values.put(columns[27], KP.getBijatyka());
+        values.put(columns[28], KP.getBronBiala());
+        values.put(columns[29], KP.getBronPalna());
+        values.put(columns[30], KP.getProwadzenie());
+        values.put(columns[31], KP.getPrzetrwanie());
+        values.put(columns[32], KP.getSkradanie());
+        values.put(columns[33], KP.getWysportowanie());
+        values.put(columns[34], KP.getZlodziejstwo());
 
-        values.put(columns[34], KP.getEkspresja());
-        values.put(columns[35], KP.getEmpatia());
-        values.put(columns[36], KP.getObycie());
-        values.put(columns[37], KP.getOszustwo());
-        values.put(columns[38], KP.getPreswazja());
-        values.put(columns[39], KP.getPolswiate());
-        values.put(columns[40], KP.getZatraszanie());
-        values.put(columns[41], KP.getZwierzeta());
+        values.put(columns[35], KP.getEkspresja());
+        values.put(columns[36], KP.getEmpatia());
+        values.put(columns[37], KP.getObycie());
+        values.put(columns[38], KP.getOszustwo());
+        values.put(columns[39], KP.getPreswazja());
+        values.put(columns[40], KP.getPolswiate());
+        values.put(columns[41], KP.getZatraszanie());
+        values.put(columns[42], KP.getZwierzeta());
 
-        values.put(columns[42], KP.getAt1Nazwa());
-        values.put(columns[43], KP.getAt2Nazwa());
-        values.put(columns[44], KP.getAt3Nazwa());
-        values.put(columns[45], KP.getAt4Nazwa());
-        values.put(columns[46], KP.getAt5Nazwa());
-        values.put(columns[47], KP.getAt6Nazwa());
-        values.put(columns[48], KP.getAt7Nazwa());
-        values.put(columns[49], KP.getAt8Nazwa());
-        values.put(columns[50], KP.getAt9Nazwa());
+        values.put(columns[43], KP.getAt1Nazwa());
+        values.put(columns[44], KP.getAt2Nazwa());
+        values.put(columns[45], KP.getAt3Nazwa());
+        values.put(columns[46], KP.getAt4Nazwa());
+        values.put(columns[47], KP.getAt5Nazwa());
+        values.put(columns[48], KP.getAt6Nazwa());
+        values.put(columns[49], KP.getAt7Nazwa());
+        values.put(columns[50], KP.getAt8Nazwa());
+        values.put(columns[51], KP.getAt9Nazwa());
 
-        values.put(columns[51], KP.getAt1Wartosc());
-        values.put(columns[52], KP.getAt2Wartosc());
-        values.put(columns[53], KP.getAt3Wartosc());
-        values.put(columns[54], KP.getAt4Wartosc());
-        values.put(columns[55], KP.getAt5Wartosc());
-        values.put(columns[56], KP.getAt6Wartosc());
-        values.put(columns[57], KP.getAt7Wartosc());
-        values.put(columns[58], KP.getAt8Wartosc());
-        values.put(columns[59], KP.getAt9Wartosc());
+        values.put(columns[52], KP.getAt1Wartosc());
+        values.put(columns[53], KP.getAt2Wartosc());
+        values.put(columns[54], KP.getAt3Wartosc());
+        values.put(columns[55], KP.getAt4Wartosc());
+        values.put(columns[56], KP.getAt5Wartosc());
+        values.put(columns[57], KP.getAt6Wartosc());
+        values.put(columns[58], KP.getAt7Wartosc());
+        values.put(columns[59], KP.getAt8Wartosc());
+        values.put(columns[60], KP.getAt9Wartosc());
 
-        values.put(columns[60], KP.getWada1Nazwa());
-        values.put(columns[61], KP.getWada2Nazwa());
-        values.put(columns[62], KP.getWada3Nazwa());
-        values.put(columns[63], KP.getWada4Nazwa());
-        values.put(columns[64], KP.getWada1Wartosc());
-        values.put(columns[65], KP.getWada2Wartosc());
-        values.put(columns[66], KP.getWada3Wartosc());
-        values.put(columns[67], KP.getWada4Wartosc());
+        values.put(columns[61], KP.getWada1Nazwa());
+        values.put(columns[62], KP.getWada2Nazwa());
+        values.put(columns[63], KP.getWada3Nazwa());
+        values.put(columns[64], KP.getWada4Nazwa());
+        values.put(columns[65], KP.getWada1Wartosc());
+        values.put(columns[66], KP.getWada2Wartosc());
+        values.put(columns[67], KP.getWada3Wartosc());
+        values.put(columns[68], KP.getWada4Wartosc());
 
-        values.put(columns[68], KP.getRozmiar());
-        values.put(columns[69], KP.getSzybkosc());
-        values.put(columns[70], KP.getInicjatywa());
-        values.put(columns[71], KP.getObrona());
-        values.put(columns[72], KP.getPancerz());
-        values.put(columns[73], KP.getZdrowieMax());
-        values.put(columns[74], KP.getSilaWoliMax());
-        values.put(columns[75], KP.getZdrowie());
-        values.put(columns[76], KP.getSilaWoli());
-        values.put(columns[77], KP.getDoswiadczenie());
-        values.put(columns[78], KP.getMoralnosc());
+        values.put(columns[69], KP.getRozmiar());
+        values.put(columns[70], KP.getSzybkosc());
+        values.put(columns[71], KP.getInicjatywa());
+        values.put(columns[72], KP.getObrona());
+        values.put(columns[73], KP.getPancerz());
+        values.put(columns[74], KP.getZdrowieMax());
+        values.put(columns[75], KP.getSilaWoliMax());
+        values.put(columns[76], KP.getZdrowie());
+        values.put(columns[77], KP.getSilaWoli());
+        values.put(columns[78], KP.getDoswiadczenie());
+        values.put(columns[79], KP.getMoralnosc());
 
-        values.put(columns[79], KP.getBron1Nazwa());
-        values.put(columns[80], KP.getBron2Nazwa());
-        values.put(columns[81], KP.getBron3Nazwa());
-        values.put(columns[82], KP.getBron1Mod());
-        values.put(columns[83], KP.getBron2Mod());
-        values.put(columns[84], KP.getBron3Mod());
+        values.put(columns[80], KP.getBron1Nazwa());
+        values.put(columns[81], KP.getBron2Nazwa());
+        values.put(columns[82], KP.getBron3Nazwa());
+        values.put(columns[83], KP.getBron1Mod());
+        values.put(columns[84], KP.getBron2Mod());
+        values.put(columns[85], KP.getBron3Mod());
 
-        values.put(columns[85], KP.getWyp1Nazwa());
-        values.put(columns[86], KP.getWyp2Nazwa());
-        values.put(columns[87], KP.getWyp3Nazwa());
-        values.put(columns[88], KP.getWyp1Mod());
-        values.put(columns[89], KP.getWyp2Mod());
-        values.put(columns[90], KP.getWyp3Mod());
+        values.put(columns[86], KP.getWyp1Nazwa());
+        values.put(columns[87], KP.getWyp2Nazwa());
+        values.put(columns[88], KP.getWyp3Nazwa());
+        values.put(columns[89], KP.getWyp1Mod());
+        values.put(columns[90], KP.getWyp2Mod());
+
+
+        values.put(columns[91], KP.getWyp3Mod());
 
 
         // 3. insert
         db.insert(TABLE_KARTY_POSTACI, // table
                 null, //nullColumnHack
                 values); // key/value -> keys = column names/ values = column values
-
+        Log.i("testy","Ilosc w bazie "+iloscKPwBazie());
         // 4. close
         db.close();
     }
@@ -192,26 +195,39 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
         // 1. get reference to readable DB
         SQLiteDatabase db = this.getReadableDatabase();
+        String idString=String.valueOf(id);
+        Log.i("testy",idString );
+        // 2. build query  <-----tuprawdopodbnie nie działa
+        Cursor cursor;
 
-        // 2. build query
-        Cursor cursor =
-                db.query(TABLE_KARTY_POSTACI, // a. table
-                        columns, // b. column names
-                        " id = ?", // c. selections
-                        new String[] { String.valueOf(id) }, // d. selections args
-                        null, // e. group by
-                        null, // f. having
-                        null, // g. order by
-                        null); // h. limit
-
+           /*  cursor=db.query(TABLE_KARTY_POSTACI, // a. table
+                            columns, // b. column names
+                            " id = ?", // c. selections
+                            new String[]{idString}, // d. selections args
+                            null, // e. group by
+                            null, // f. having
+                            null, // g. order by
+                            null); // h. limit*/
+        String sqlQuery = "SELECT * FROM "+TABLE_KARTY_POSTACI+ " WHERE id="+idString;
+        Log.i("testy",sqlQuery);
+        cursor=db.rawQuery(sqlQuery,null);
         // 3. if we got results get the first one
+
         if (cursor != null)
             cursor.moveToFirst();
+        ///tu juz nie dziala
 
         // 4. build book object
         KartaPostaci KP = new KartaPostaci();
-        KP.setId(Integer.parseInt(cursor.getString(0)));
+
+
+      //  KP.setId(Integer.parseInt(cursor.getString(0)));
+        Log.i("testy","Ilosc "+cursor.getCount());
+        Log.i("testy", cursor.getString(1)+"");
+
+
         KP.setImie(cursor.getString(1));
+
         KP.setWiek(cursor.getString(2));
         KP.setGracz(cursor.getString(3));
         KP.setKoncept(cursor.getString(4));
@@ -229,86 +245,89 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         KP.setWytrzymalosc(Integer.parseInt(cursor.getString( 15)));
         KP.setPreswazja(Integer.parseInt(cursor.getString( 16)));
         KP.setManipulacja(Integer.parseInt(cursor.getString( 17)));
+        KP.setOpanowanie((Integer.parseInt(cursor.getString(18))));
 
-        KP.setDedukcja(Integer.parseInt(cursor.getString(18 )));
-        KP.setInformatyka(Integer.parseInt(cursor.getString( 19)));
-        KP.setMedycyna(Integer.parseInt(cursor.getString(20 )));
-        KP.setNauka(Integer.parseInt(cursor.getString( 21)));
-        KP.setOkultyzm(Integer.parseInt(cursor.getString( 22)));
-        KP.setPolityka(Integer.parseInt(cursor.getString( 23)));
-        KP.setRzemioslo(Integer.parseInt(cursor.getString( 24)));
-        KP.setWyksztalcenie(Integer.parseInt(cursor.getString( 25)));
+        KP.setDedukcja(Integer.parseInt(cursor.getString(19)));
+        KP.setInformatyka(Integer.parseInt(cursor.getString( 20)));
+        KP.setMedycyna(Integer.parseInt(cursor.getString(22 )));
+        KP.setNauka(Integer.parseInt(cursor.getString( 22)));
+        KP.setOkultyzm(Integer.parseInt(cursor.getString( 23)));
+        KP.setPolityka(Integer.parseInt(cursor.getString( 24)));
+        KP.setRzemioslo(Integer.parseInt(cursor.getString( 25)));
+        KP.setWyksztalcenie(Integer.parseInt(cursor.getString( 26)));
 
-        KP.setBijatyka(Integer.parseInt(cursor.getString( 26)));
-        KP.setBronBiala(Integer.parseInt(cursor.getString( 27)));
-        KP.setBronPalna(Integer.parseInt(cursor.getString( 28)));
-        KP.setProwadzenie(Integer.parseInt(cursor.getString( 29)));
-        KP.setPrzetrwanie(Integer.parseInt(cursor.getString( 30)));
-        KP.setSkradanie(Integer.parseInt(cursor.getString( 31)));
-        KP.setWysportowanie(Integer.parseInt(cursor.getString(32 )));
-        KP.setZlodziejstwo(Integer.parseInt(cursor.getString( 33)));
+        KP.setBijatyka(Integer.parseInt(cursor.getString( 27)));
+        KP.setBronBiala(Integer.parseInt(cursor.getString( 28)));
+        KP.setBronPalna(Integer.parseInt(cursor.getString( 29)));
+        KP.setProwadzenie(Integer.parseInt(cursor.getString( 30)));
+        KP.setPrzetrwanie(Integer.parseInt(cursor.getString( 31)));
+        KP.setSkradanie(Integer.parseInt(cursor.getString( 32)));
+        KP.setWysportowanie(Integer.parseInt(cursor.getString(33 )));
+        KP.setZlodziejstwo(Integer.parseInt(cursor.getString( 34)));
 
-        KP.setEkspresja(Integer.parseInt(cursor.getString( 34)));
-        KP.setEmpatia(Integer.parseInt(cursor.getString( 35)));
-        KP.setObycie(Integer.parseInt(cursor.getString(36 )));
-        KP.setOszustwo(Integer.parseInt(cursor.getString(37 )));
-        KP.setPreswazja(Integer.parseInt(cursor.getString( 38)));
-        KP.setPolswiate(Integer.parseInt(cursor.getString( 39)));
-        KP.setZatraszanie(Integer.parseInt(cursor.getString( 40)));
-        KP.setZwierzeta(Integer.parseInt(cursor.getString( 41)));
+        KP.setEkspresja(Integer.parseInt(cursor.getString( 35)));
+        KP.setEmpatia(Integer.parseInt(cursor.getString( 36)));
+        KP.setObycie(Integer.parseInt(cursor.getString(37 )));
+        KP.setOszustwo(Integer.parseInt(cursor.getString(38 )));
+        KP.setPreswazja(Integer.parseInt(cursor.getString( 39)));
+        KP.setPolswiate(Integer.parseInt(cursor.getString( 40)));
+        KP.setZatraszanie(Integer.parseInt(cursor.getString( 41)));
+        KP.setZwierzeta(Integer.parseInt(cursor.getString( 42)));
 
-        KP.setAt1Nazwa(cursor.getString( 42));
-        KP.setAt2Nazwa(cursor.getString( 43));
-        KP.setAt3Nazwa(cursor.getString( 44));
-        KP.setAt4Nazwa(cursor.getString( 45));
-        KP.setAt5Nazwa(cursor.getString( 46));
-        KP.setAt6Nazwa(cursor.getString( 47));
-        KP.setAt7Nazwa(cursor.getString( 48));
-        KP.setAt8Nazwa(cursor.getString( 49));
-        KP.setAt9Nazwa(cursor.getString( 50));
+        KP.setAt1Nazwa(cursor.getString( 43));
+        KP.setAt2Nazwa(cursor.getString( 44));
+        KP.setAt3Nazwa(cursor.getString( 45));
+        KP.setAt4Nazwa(cursor.getString( 46));
+        KP.setAt5Nazwa(cursor.getString( 47));
+        KP.setAt6Nazwa(cursor.getString( 48));
+        KP.setAt7Nazwa(cursor.getString( 49));
+        KP.setAt8Nazwa(cursor.getString( 50));
+        KP.setAt9Nazwa(cursor.getString( 51));
 
-        KP.setAt1Wartosc(Integer.parseInt(cursor.getString( 51)));
-        KP.setAt2Wartosc(Integer.parseInt(cursor.getString(52 )));
-        KP.setAt3Wartosc(Integer.parseInt(cursor.getString(53 )));
-        KP.setAt4Wartosc(Integer.parseInt(cursor.getString( 54)));
-        KP.setAt5Wartosc(Integer.parseInt(cursor.getString( 55)));
-        KP.setAt6Wartosc(Integer.parseInt(cursor.getString(56 )));
-        KP.setAt7Wartosc(Integer.parseInt(cursor.getString( 57)));
-        KP.setAt8Wartosc(Integer.parseInt(cursor.getString(58 )));
-        KP.setAt9Wartosc(Integer.parseInt(cursor.getString(59 )));
+        KP.setAt1Wartosc(Integer.parseInt(cursor.getString( 52)));
+        KP.setAt2Wartosc(Integer.parseInt(cursor.getString(53)));
+        KP.setAt3Wartosc(Integer.parseInt(cursor.getString(54 )));
+        KP.setAt4Wartosc(Integer.parseInt(cursor.getString( 55)));
+        KP.setAt5Wartosc(Integer.parseInt(cursor.getString( 56)));
+        KP.setAt6Wartosc(Integer.parseInt(cursor.getString(57)));
+        KP.setAt7Wartosc(Integer.parseInt(cursor.getString( 58)));
+        KP.setAt8Wartosc(Integer.parseInt(cursor.getString(59 )));
+        KP.setAt9Wartosc(Integer.parseInt(cursor.getString(60 )));
 
-        KP.setWada1Nazwa(cursor.getString(60 ));
-        KP.setWada2Nazwa(cursor.getString( 61));
-        KP.setWada3Nazwa(cursor.getString( 62));
-        KP.setWada4Nazwa(cursor.getString(63 ));
-        KP.setWada1Wartosc(Integer.parseInt(cursor.getString(64 )));
-        KP.setWada2Wartosc(Integer.parseInt(cursor.getString( 65)));
-        KP.setWada3Wartosc(Integer.parseInt(cursor.getString( 66)));
-        KP.setWada4Wartosc(Integer.parseInt(cursor.getString( 67)));
+        KP.setWada1Nazwa(cursor.getString(61 ));
+        KP.setWada2Nazwa(cursor.getString( 62));
+        KP.setWada3Nazwa(cursor.getString( 63));
+        KP.setWada4Nazwa(cursor.getString(64 ));
+        KP.setWada1Wartosc(Integer.parseInt(cursor.getString(65 )));
+        KP.setWada2Wartosc(Integer.parseInt(cursor.getString( 66)));
+        KP.setWada3Wartosc(Integer.parseInt(cursor.getString( 67)));
+        KP.setWada4Wartosc(Integer.parseInt(cursor.getString( 68)));
 
-        KP.setRozmiar(cursor.getString( 68));
-        KP.setSzybkosc(cursor.getString(69 ));
-        KP.setInicjatywa(cursor.getString( 70));
-        KP.setObrona(cursor.getString( 71));
-        KP.setPancerz(cursor.getString(72 ));
-        KP.setZdrowieMax(Integer.parseInt(cursor.getString( 73)));
-        KP.setSilaWoliMax(Integer.parseInt(cursor.getString( 74)));
-        KP.setZdrowie(Integer.parseInt(cursor.getString(75 )));
-        KP.setSilaWoli(Integer.parseInt(cursor.getString(76 )));
-        KP.setDoswiadczenie(Integer.parseInt(cursor.getString(77 )));
-        KP.setMoralnosc(Integer.parseInt(cursor.getString( 78)));
-        KP.setBron1Nazwa(cursor.getString( 79));
-        KP.setBron2Nazwa(cursor.getString( 80));
-        KP.setBron3Nazwa(cursor.getString( 81));
-        KP.setBron1Mod(Integer.parseInt(cursor.getString( 82)));
-        KP.setBron2Mod(Integer.parseInt(cursor.getString( 83)));
-        KP.setBron3Mod(Integer.parseInt(cursor.getString( 84)));
-        KP.setWyp1Nazwa(cursor.getString( 85));
-        KP.setWyp2Nazwa(cursor.getString( 86));
-        KP.setWyp3Nazwa(cursor.getString( 87));
-        KP.setWyp1Mod(Integer.parseInt(cursor.getString( 88)));
-        KP.setWyp2Mod(Integer.parseInt(cursor.getString( 89)));
-        KP.setWyp3Mod(Integer.parseInt(cursor.getString( 90)));
+        KP.setRozmiar(cursor.getString( 69));
+        KP.setSzybkosc(cursor.getString(70 ));
+        KP.setInicjatywa(cursor.getString( 71));
+        KP.setObrona(cursor.getString( 72));
+        KP.setPancerz(cursor.getString(73 ));
+        KP.setZdrowieMax(Integer.parseInt(cursor.getString( 74)));
+        KP.setSilaWoliMax(Integer.parseInt(cursor.getString( 75)));
+        KP.setZdrowie(Integer.parseInt(cursor.getString(76 )));
+        KP.setSilaWoli(Integer.parseInt(cursor.getString(77 )));
+        KP.setDoswiadczenie(Integer.parseInt(cursor.getString(78 )));
+        KP.setMoralnosc(Integer.parseInt(cursor.getString( 79)));
+        KP.setBron1Nazwa(cursor.getString( 80));
+        KP.setBron2Nazwa(cursor.getString( 81));
+        KP.setBron3Nazwa(cursor.getString( 82));
+        KP.setBron1Mod(Integer.parseInt(cursor.getString( 83)));
+        KP.setBron2Mod(Integer.parseInt(cursor.getString( 84)));
+        KP.setBron3Mod(Integer.parseInt(cursor.getString( 85)));
+        KP.setWyp1Nazwa(cursor.getString( 86));
+        KP.setWyp2Nazwa(cursor.getString( 87));
+        KP.setWyp3Nazwa(cursor.getString( 88));
+        KP.setWyp1Mod(Integer.parseInt(cursor.getString( 89)));
+        KP.setWyp2Mod(Integer.parseInt(cursor.getString( 90)));
+
+
+        KP.setWyp3Mod(Integer.parseInt(cursor.getString( 91)));
 
 
 
@@ -369,88 +388,89 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         values.put(columns[15], KP.getWytrzymalosc());
         values.put(columns[16], KP.getPreswazja());
         values.put(columns[17], KP.getManipulacja());
+        values.put(columns[18], KP.getOpanowanie());
 
-        values.put(columns[18], KP.getDedukcja());
-        values.put(columns[19], KP.getInformatyka());
-        values.put(columns[20], KP.getMedycyna());
-        values.put(columns[21], KP.getNauka());
-        values.put(columns[22], KP.getOkultyzm());
-        values.put(columns[23], KP.getPolityka());
-        values.put(columns[24], KP.getRzemioslo());
-        values.put(columns[25], KP.getWyksztalcenie());
+        values.put(columns[19], KP.getDedukcja());
+        values.put(columns[20], KP.getInformatyka());
+        values.put(columns[21], KP.getMedycyna());
+        values.put(columns[22], KP.getNauka());
+        values.put(columns[23], KP.getOkultyzm());
+        values.put(columns[24], KP.getPolityka());
+        values.put(columns[25], KP.getRzemioslo());
+        values.put(columns[26], KP.getWyksztalcenie());
 
-        values.put(columns[26], KP.getBijatyka());
-        values.put(columns[27], KP.getBronBiala());
-        values.put(columns[28], KP.getBronPalna());
-        values.put(columns[29], KP.getProwadzenie());
-        values.put(columns[30], KP.getPrzetrwanie());
-        values.put(columns[31], KP.getSkradanie());
-        values.put(columns[32], KP.getWysportowanie());
-        values.put(columns[33], KP.getZlodziejstwo());
+        values.put(columns[27], KP.getBijatyka());
+        values.put(columns[28], KP.getBronBiala());
+        values.put(columns[29], KP.getBronPalna());
+        values.put(columns[30], KP.getProwadzenie());
+        values.put(columns[31], KP.getPrzetrwanie());
+        values.put(columns[32], KP.getSkradanie());
+        values.put(columns[33], KP.getWysportowanie());
+        values.put(columns[34], KP.getZlodziejstwo());
 
-        values.put(columns[34], KP.getEkspresja());
-        values.put(columns[35], KP.getEmpatia());
-        values.put(columns[36], KP.getObycie());
-        values.put(columns[37], KP.getOszustwo());
-        values.put(columns[38], KP.getPreswazja());
-        values.put(columns[39], KP.getPolswiate());
-        values.put(columns[40], KP.getZatraszanie());
-        values.put(columns[41], KP.getZwierzeta());
+        values.put(columns[35], KP.getEkspresja());
+        values.put(columns[36], KP.getEmpatia());
+        values.put(columns[37], KP.getObycie());
+        values.put(columns[38], KP.getOszustwo());
+        values.put(columns[39], KP.getPreswazja());
+        values.put(columns[40], KP.getPolswiate());
+        values.put(columns[41], KP.getZatraszanie());
+        values.put(columns[42], KP.getZwierzeta());
 
-        values.put(columns[42], KP.getAt1Nazwa());
-        values.put(columns[43], KP.getAt2Nazwa());
-        values.put(columns[44], KP.getAt3Nazwa());
-        values.put(columns[45], KP.getAt4Nazwa());
-        values.put(columns[46], KP.getAt5Nazwa());
-        values.put(columns[47], KP.getAt6Nazwa());
-        values.put(columns[48], KP.getAt7Nazwa());
-        values.put(columns[49], KP.getAt8Nazwa());
-        values.put(columns[50], KP.getAt9Nazwa());
+        values.put(columns[43], KP.getAt1Nazwa());
+        values.put(columns[44], KP.getAt2Nazwa());
+        values.put(columns[45], KP.getAt3Nazwa());
+        values.put(columns[46], KP.getAt4Nazwa());
+        values.put(columns[47], KP.getAt5Nazwa());
+        values.put(columns[48], KP.getAt6Nazwa());
+        values.put(columns[49], KP.getAt7Nazwa());
+        values.put(columns[50], KP.getAt8Nazwa());
+        values.put(columns[51], KP.getAt9Nazwa());
 
-        values.put(columns[51], KP.getAt1Wartosc());
-        values.put(columns[52], KP.getAt2Wartosc());
-        values.put(columns[53], KP.getAt3Wartosc());
-        values.put(columns[54], KP.getAt4Wartosc());
-        values.put(columns[55], KP.getAt5Wartosc());
-        values.put(columns[56], KP.getAt6Wartosc());
-        values.put(columns[57], KP.getAt7Wartosc());
-        values.put(columns[58], KP.getAt8Wartosc());
-        values.put(columns[59], KP.getAt9Wartosc());
+        values.put(columns[52], KP.getAt1Wartosc());
+        values.put(columns[53], KP.getAt2Wartosc());
+        values.put(columns[54], KP.getAt3Wartosc());
+        values.put(columns[55], KP.getAt4Wartosc());
+        values.put(columns[56], KP.getAt5Wartosc());
+        values.put(columns[57], KP.getAt6Wartosc());
+        values.put(columns[58], KP.getAt7Wartosc());
+        values.put(columns[59], KP.getAt8Wartosc());
+        values.put(columns[60], KP.getAt9Wartosc());
 
-        values.put(columns[60], KP.getWada1Nazwa());
-        values.put(columns[61], KP.getWada2Nazwa());
-        values.put(columns[62], KP.getWada3Nazwa());
-        values.put(columns[63], KP.getWada4Nazwa());
-        values.put(columns[64], KP.getWada1Wartosc());
-        values.put(columns[65], KP.getWada2Wartosc());
-        values.put(columns[66], KP.getWada3Wartosc());
-        values.put(columns[67], KP.getWada4Wartosc());
+        values.put(columns[61], KP.getWada1Nazwa());
+        values.put(columns[62], KP.getWada2Nazwa());
+        values.put(columns[63], KP.getWada3Nazwa());
+        values.put(columns[64], KP.getWada4Nazwa());
+        values.put(columns[65], KP.getWada1Wartosc());
+        values.put(columns[66], KP.getWada2Wartosc());
+        values.put(columns[67], KP.getWada3Wartosc());
+        values.put(columns[68], KP.getWada4Wartosc());
 
-        values.put(columns[68], KP.getRozmiar());
-        values.put(columns[69], KP.getSzybkosc());
-        values.put(columns[70], KP.getInicjatywa());
-        values.put(columns[71], KP.getObrona());
-        values.put(columns[72], KP.getPancerz());
-        values.put(columns[73], KP.getZdrowieMax());
-        values.put(columns[74], KP.getSilaWoliMax());
-        values.put(columns[75], KP.getZdrowie());
-        values.put(columns[76], KP.getSilaWoli());
-        values.put(columns[77], KP.getDoswiadczenie());
-        values.put(columns[78], KP.getMoralnosc());
+        values.put(columns[69], KP.getRozmiar());
+        values.put(columns[70], KP.getSzybkosc());
+        values.put(columns[71], KP.getInicjatywa());
+        values.put(columns[72], KP.getObrona());
+        values.put(columns[73], KP.getPancerz());
+        values.put(columns[74], KP.getZdrowieMax());
+        values.put(columns[75], KP.getSilaWoliMax());
+        values.put(columns[76], KP.getZdrowie());
+        values.put(columns[77], KP.getSilaWoli());
+        values.put(columns[78], KP.getDoswiadczenie());
+        values.put(columns[79], KP.getMoralnosc());
 
-        values.put(columns[79], KP.getBron1Nazwa());
-        values.put(columns[80], KP.getBron2Nazwa());
-        values.put(columns[81], KP.getBron3Nazwa());
-        values.put(columns[82], KP.getBron1Mod());
-        values.put(columns[83], KP.getBron2Mod());
-        values.put(columns[84], KP.getBron3Mod());
+        values.put(columns[80], KP.getBron1Nazwa());
+        values.put(columns[81], KP.getBron2Nazwa());
+        values.put(columns[82], KP.getBron3Nazwa());
+        values.put(columns[83], KP.getBron1Mod());
+        values.put(columns[84], KP.getBron2Mod());
+        values.put(columns[85], KP.getBron3Mod());
 
-        values.put(columns[85], KP.getWyp1Nazwa());
-        values.put(columns[86], KP.getWyp2Nazwa());
-        values.put(columns[87], KP.getWyp3Nazwa());
-        values.put(columns[88], KP.getWyp1Mod());
-        values.put(columns[89], KP.getWyp2Mod());
-        values.put(columns[90], KP.getWyp3Mod());
+        values.put(columns[86], KP.getWyp1Nazwa());
+        values.put(columns[87], KP.getWyp2Nazwa());
+        values.put(columns[88], KP.getWyp3Nazwa());
+        values.put(columns[89], KP.getWyp1Mod());
+        values.put(columns[90], KP.getWyp2Mod());
+        values.put(columns[91], KP.getWyp3Mod());
 
 
         // 3. updating row
@@ -481,5 +501,24 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         //log
         Log.d("deleteBook", KP.toString());
 
+    }
+    public int iloscKPwBazie(){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        String sqlQuery = "SELECT COUNT(id) FROM "+TABLE_KARTY_POSTACI;
+        Cursor cursor =db.rawQuery(sqlQuery,null);
+
+        int counter=0;
+        return  counter = cursor.getCount();
+        /*
+        if(cursor.getCount()>0){
+            cursor.moveToFirst();
+            counter=cursor.getInt(0);
+        }
+        else{
+            counter=999;
+        }
+        cursor.close();
+        return counter;*/
     }
 }

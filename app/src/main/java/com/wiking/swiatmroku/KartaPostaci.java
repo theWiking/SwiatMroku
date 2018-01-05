@@ -28,6 +28,7 @@ public class KartaPostaci {
     private int wytrzymalosc;
     private int prezentacja;
     private int manipulacja;
+    private int opanowanie;
 
     private int dedukcja;
     private int informatyka;
@@ -842,7 +843,7 @@ public class KartaPostaci {
 
     public KartaPostaci(){}
     public KartaPostaci(int id, String imie, String wiek, String gracz, String koncept, String cnota, String skaza, String kronika, String frakcja, String nazwaGrupy,
-                        int inteligencja, int czujnosc, int determinacja, int sila, int zrecznosc, int wytrzymalosc, int prezentacja, int manipulacja,
+                        int inteligencja, int czujnosc, int determinacja, int sila, int zrecznosc, int wytrzymalosc, int prezentacja, int manipulacja, int opanowanie,
                         int dedukcja, int informatyka, int medycyna, int nauka, int okultyzm, int rzemioslo, int polityka, int wyksztalcenie,
                         int bijatyka, int bronBiala, int bronPalna, int prowadzenie, int przetrwanie, int skradanie, int wysportowanie, int zlodziejstwo,
                         int ekspresja, int empatia, int obycie, int oszustwo, int preswazja, int polswiate, int zatraszanie, int zwierzeta,
@@ -870,6 +871,7 @@ public class KartaPostaci {
         this.wytrzymalosc = wytrzymalosc;
         this.prezentacja = prezentacja;
         this.manipulacja = manipulacja;
+        this.opanowanie = opanowanie;
         this.dedukcja = dedukcja;
         this.informatyka = informatyka;
         this.medycyna = medycyna;
@@ -964,6 +966,7 @@ public class KartaPostaci {
         lista.add(wytrzymalosc);
         lista.add(prezentacja);
         lista.add(manipulacja);
+        lista.add(opanowanie);
         lista.add(dedukcja);
         lista.add(informatyka);
         lista.add(medycyna);
@@ -1043,7 +1046,15 @@ public class KartaPostaci {
         return lista;
     }
     public String toString(){
-        return "ID: "+id+" imie: "+imie;
+        return " imie: "+imie;
+    }
+
+    public int getOpanowanie() {
+        return opanowanie;
+    }
+
+    public void setOpanowanie(int opanowanie) {
+        this.opanowanie = opanowanie;
     }
 }
 

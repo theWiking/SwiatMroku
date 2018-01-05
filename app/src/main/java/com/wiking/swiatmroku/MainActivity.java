@@ -18,8 +18,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //SQLiteDatabase mDatabase = openOrCreateDatabase("db_card", SQLiteDatabase.OPEN_READWRITE, null);
         SQLiteDatabase mDatabase = openOrCreateDatabase("db_card", SQLiteDatabase.OPEN_READWRITE, null);
-        mDatabase.setLocale(Locale.getDefault());
+       mDatabase.setLocale(Locale.getDefault());
+       //mDatabase.setLocale(Locale.getDefault());
         String columns[] = {"id", "imie", "wiek","gracz","koncept","cnota","skaza","kronika","frakcja","nazwaGrupy",
                 "inteligencja","czujnosc","determinacja","sila","zrecznosc","wytrzymalosc","prezentacja","manipulacja",
                 "dedukcja","informatyka","medycyna","nauka","okultyzm","polityka","rzemioslo","wyksztalcenie",
@@ -32,8 +34,8 @@ public class MainActivity extends AppCompatActivity {
                 "bron1Nazwa","bron2Nazwa","bron3Nazwa","bron1Mod","bron2Mod","bron3Mod",
                 "wyp1Nazwa","wyp2Nazwa","wyp3Nazwa","wyp1Mod","wyp2Mod","wyp3Mod"};
         //Cursor c = mDatabase.query("tablica_KP", columns, null, null, null, null, "result DESC");
-
         MySQLiteHelper db = new MySQLiteHelper(this);
+       // MySQLiteHelper db = new MySQLiteHelper(this);
 
         /**
          * CRUD Operations
@@ -58,4 +60,11 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void onClickPrzegladajKarty(View view) {
+        Intent przegladajKarty;
+        przegladajKarty=new Intent(this,PrzegladajKarty.class);
+        startActivity(przegladajKarty);
+    }
+
 }

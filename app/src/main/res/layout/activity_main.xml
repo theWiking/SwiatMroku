@@ -33,6 +33,7 @@
             android:layout_below="@+id/ButtonDodajKarte"
             android:layout_centerHorizontal="true"
             android:text="Przegladaj Karty"
+            android:onClick="onClickPrzegladajKarty"
           />
 
         <Button
