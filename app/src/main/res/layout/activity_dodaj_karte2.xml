@@ -10,7 +10,9 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="0dp">
 
 
         <TableLayout
@@ -19,18 +21,21 @@
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="0dp"
             tools:layout_editor_absoluteY="0dp">
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
-            <TextView
 
-                android:layout_width="157dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Dane"
-                android:textAlignment="center"
-                android:textSize="24sp" />
+                <TextView
+
+                    android:layout_width="157dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Dane"
+                    android:textAlignment="center"
+                    android:textSize="24sp" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -219,17 +224,19 @@
                     android:layout_weight="1"
                     android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp">
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp">
 
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
 
                     android:layout_width="157dp"
@@ -239,6 +246,7 @@
                     android:textAlignment="center"
                     android:textSize="24sp" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -644,15 +652,18 @@
                     android:textAlignment="center"
                     tools:ignore="MissingConstraints" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="40dp">
 
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
                 <TextView
 
                     android:layout_width="157dp"
@@ -1397,15 +1408,17 @@
                     android:textAlignment="center"
                     tools:ignore="MissingConstraints" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="40dp">
 
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/textView13"
@@ -1414,21 +1427,21 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:text="Atuty"
-                    android:textSize="25dp"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 1" />
+                    android:hint="Atut 1"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut1"
@@ -1442,15 +1455,15 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 2" />
+                    android:hint="Atut 2"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut2"
@@ -1461,17 +1474,18 @@
                     android:max="5"
                     android:progress="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 3" />
+                    android:hint="Atut 3"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut3"
@@ -1482,17 +1496,18 @@
                     android:max="5"
                     android:progress="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 4" />
+                    android:hint="Atut 4"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut4"
@@ -1503,17 +1518,18 @@
                     android:max="5"
                     android:progress="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 5" />
+                    android:hint="Atut 5"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut5"
@@ -1534,8 +1550,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 6" />
+                    android:hint="Atut 6"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut6"
@@ -1549,15 +1565,15 @@
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 7" />
+                    android:hint="Atut 7"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut7"
@@ -1568,17 +1584,18 @@
                     android:max="5"
                     android:progress="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 8" />
+                    android:hint="Atut 8"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut8"
@@ -1589,17 +1606,18 @@
                     android:max="5"
                     android:progress="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextAtut9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Atut 9" />
+                    android:hint="Atut 9"
+                    android:inputType="textPersonName" />
 
                 <SeekBar
                     android:id="@+id/seekBarAtut9"
@@ -1610,9 +1628,10 @@
                     android:max="5"
                     android:progress="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
                     android:id="@+id/wadytextview"
@@ -1621,12 +1640,13 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:text="Wady"
-                    android:textSize="25dp"
-                    android:textAlignment="center" />
+                    android:textAlignment="center"
+                    android:textSize="25dp" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextWada1"
@@ -1635,12 +1655,13 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Wada 1" />
+                    android:hint="Wada 1"
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
 
                 <EditText
@@ -1650,12 +1671,13 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Wada 2" />
+                    android:hint="Wada 2"
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextWada3"
@@ -1664,12 +1686,14 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    android:hint="Wada 3" />
+                    android:hint="Wada 3"
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
+
                 <TextView
 
                     android:layout_width="wrap_content"
@@ -1677,8 +1701,7 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:text="Broń"
-                    android:textSize="25dp"
-                    />
+                    android:textSize="25dp" />
 
 
                 <TextView
@@ -1688,21 +1711,22 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:text="Mod"
-                    android:textSize="25dp"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="textEnd"
+                    android:textSize="25dp" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextBron1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:layout_weight="1"
-                    android:inputType="textPersonName"
-                    android:hint="Nazwa broni " />
+                    android:ems="10"
+                    android:hint="Nazwa broni "
+                    android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/editTextBron1Mod"
@@ -1710,54 +1734,61 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="2"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextBron2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:layout_weight="1"
-                    android:inputType="textPersonName"
-                    android:hint="Nazwa broni " />
+                    android:ems="10"
+                    android:hint="Nazwa broni "
+                    android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/editTextBron2Mod"
                     android:layout_width="0dip"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
 
                     android:ems="2"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextBron3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:layout_weight="1"
-                    android:inputType="textPersonName"
-                    android:hint="Nazwa broni " />
+                    android:ems="10"
+                    android:hint="Nazwa broni "
+                    android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/editTextBron3Mod"
                     android:layout_width="0dip"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:ems="2"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
+
                 <TextView
 
                     android:layout_width="wrap_content"
@@ -1765,9 +1796,7 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:text="Wyposażenie"
-                    android:textSize="25dp"
-                    />
-
+                    android:textSize="25dp" />
 
 
                 <TextView
@@ -1777,77 +1806,84 @@
                     android:layout_span="2"
                     android:layout_weight="1"
                     android:text="Mod"
-                    android:textSize="25dp"
-                    android:textAlignment="textEnd" />
+                    android:textAlignment="textEnd"
+                    android:textSize="25dp" />
             </TableRow>
 
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextWyp1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:layout_weight="1"
-                    android:inputType="textPersonName"
-                    android:hint="Nazwa broni " />
+                    android:ems="10"
+                    android:hint="Nazwa broni "
+                    android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/editTextWyp1Mod"
                     android:layout_width="0dip"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:ems="2"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextWyp2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:layout_weight="1"
-                    android:inputType="textPersonName"
-                    android:hint="Nazwa broni " />
+                    android:ems="10"
+                    android:hint="Nazwa broni "
+                    android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/editTextWyp2Mod"
                     android:layout_width="0dip"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:ems="2"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextWyp3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ems="10"
                     android:layout_weight="1"
-                    android:inputType="textPersonName"
-                    android:hint="Nazwa broni " />
+                    android:ems="10"
+                    android:hint="Nazwa broni "
+                    android:inputType="textPersonName" />
 
                 <EditText
                     android:id="@+id/editTextWyp3Mod"
                     android:layout_width="0dip"
-                    android:layout_weight="1"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:ems="2"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginTop="20dp">
+
                 <TextView
 
                     android:layout_width="wrap_content"
@@ -1855,8 +1891,7 @@
 
                     android:layout_weight="1"
                     android:text="Zdrowie"
-                    android:textSize="25dp"
-                    />
+                    android:textSize="25dp" />
 
                 <TextView
 
@@ -1867,9 +1902,10 @@
                     android:textAlignment="textEnd"
                     android:textSize="25dp" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <EditText
                     android:id="@+id/editTextZdrowie"
@@ -1877,7 +1913,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
 
                 <TextView
 
@@ -1892,38 +1929,40 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:ems="10"
-                    android:inputType="number" />
+                    android:inputType="number"
+                    android:text="0" />
 
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Szybkość"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Szybkość" />
 
                 <EditText
                     android:id="@+id/editTextSzybkosc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    />
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rozmiar"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Rozmiar" />
 
                 <EditText
                     android:id="@+id/editTextRozmiar"
@@ -1931,19 +1970,19 @@
                     android:layout_height="wrap_content"
 
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    />
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Inicjatywa"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Inicjatywa" />
 
                 <EditText
                     android:id="@+id/editTextInicjatywa"
@@ -1951,19 +1990,19 @@
                     android:layout_height="wrap_content"
 
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    />
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Obrona"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Obrona" />
 
                 <EditText
                     android:id="@+id/editTextObrona"
@@ -1971,19 +2010,19 @@
                     android:layout_height="wrap_content"
 
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    />
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Pancerz"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Pancerz" />
 
                 <EditText
                     android:id="@+id/editTextPancerz"
@@ -1991,39 +2030,40 @@
                     android:layout_height="wrap_content"
 
                     android:ems="10"
-                    android:inputType="textPersonName"
-                    />
+                    android:inputType="textPersonName" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
 
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Doswiadczenie"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Doswiadczenie" />
 
                 <EditText
                     android:id="@+id/editTextDoswiadczenie"
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:ems="10"
                     android:inputType="number"
-                    />
+                    android:text="0" />
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+                android:layout_height="match_parent">
+
                 <TextView
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Moralność"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1"
+                    android:text="Moralność" />
 
                 <EditText
                     android:id="@+id/editTextMoralnosc"
@@ -2032,14 +2072,16 @@
 
                     android:ems="10"
                     android:inputType="number"
-                    />
+                    android:text="0" />
 
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="40dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="40dp">
+
                 <Button
                     android:id="@+id/buttonDodaj_Karte_doBazy"
                     android:layout_width="0dip"
@@ -2051,15 +2093,15 @@
                     tools:ignore="MissingConstraints" />
 
             </TableRow>
+
             <TableRow
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="20dp">
 
             </TableRow>
         </TableLayout>
-
 
 
     </ScrollView>

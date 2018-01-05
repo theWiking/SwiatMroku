@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.graphics.Rect;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -157,7 +158,7 @@ public class DodajKarte2 extends AppCompatActivity {
     private int WypMod3;
 
     private Button dodajKarteDoBazy;
-    private KartaPostaci KARTA_POSTACI;
+    private KartaPostaci KARTA_POSTACI = new KartaPostaci();
     @Override
     public boolean dispatchTouchEvent(MotionEvent event) {
         if (event.getAction() == MotionEvent.ACTION_DOWN) {
@@ -179,9 +180,6 @@ public class DodajKarte2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dodaj_karte2);
         final View rootView = getWindow().getDecorView().getRootView();
-
-
-
 
 
         textViewGrup1 = (TextView) rootView.findViewById(R.id.textViewGrup1);
@@ -2568,6 +2566,8 @@ public class DodajKarte2 extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //TO-DO z danych dodać
+                //TODO na koncu przeniesc to do poprawnego klikniecia
+
                 imie=((EditText) rootView.findViewById(R.id.editTextImie)).getText().toString();
                 wiek=((EditText) rootView.findViewById(R.id.editTextWiek)).getText().toString();
                 gracz=((EditText) rootView.findViewById(R.id.editTextGracz)).getText().toString();
@@ -2609,48 +2609,44 @@ public class DodajKarte2 extends AppCompatActivity {
                 inicjatywa=((EditText)rootView.findViewById(R.id.editTextInicjatywa)).getText().toString();
                 obrona=((EditText)rootView.findViewById(R.id.editTextObrona)).getText().toString();
                 pancerz=((EditText)rootView.findViewById(R.id.editTextPancerz)).getText().toString();
-                doswiadczenie=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextDoswiadczenie)).getText().toString());
-                zdrowie=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextZdrowie)).getText().toString());
-                silaWoli=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextSilaWoli)).getText().toString());
-                moralnosc=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextMoralnosc)).getText().toString());
+
+
+                Bron1=((EditText)rootView.findViewById(R.id.editTextBron1)).getText().toString();
+                Bron2=((EditText)rootView.findViewById(R.id.editTextBron2)).getText().toString();
+                Bron3=((EditText)rootView.findViewById(R.id.editTextBron3)).getText().toString();
+                Wyp1=((EditText)rootView.findViewById(R.id.editTextWyp1)).getText().toString();
+                Wyp2=((EditText)rootView.findViewById(R.id.editTextWyp2)).getText().toString();
+                Wyp3=((EditText)rootView.findViewById(R.id.editTextWyp3)).getText().toString();
+                doswiadczenie=Integer.valueOf(((EditText) rootView.findViewById(R.id.editTextDoswiadczenie)).getText().toString());
+              zdrowie=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextZdrowie)).getText().toString());
+               silaWoli=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextSilaWoli)).getText().toString());
+              moralnosc=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextMoralnosc)).getText().toString());
+
+                BronMod1=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron1Mod)).getText().toString());
+                BronMod2=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron2Mod)).getText().toString());
+                BronMod3=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextBron3Mod)).getText().toString());
+                WypMod1=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp1Mod)).getText().toString());
+                WypMod2=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp2Mod)).getText().toString());
+                WypMod3=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp3Mod)).getText().toString());
 
 
 
-                //TODO reszta zbindować pod przyciskiem
 
-                /*
-
-
-
-                private String Bron1;
-                private int BronMod1;
-                private String Bron2;
-                private int BronMod2;
-                private String Bron3;
-                private int BronMod3;
-                private String Wyp1;
-                private int WypMod1;
-                private String Wyp2;
-                private int WypMod2;
-                private String Wyp3;
-                private int WypMod3;
-*/
 
                 //Todo z umiejetnosci
                 //Todo z atrybutow
 
-
-
+//Todo do karty postaci
+                KARTA_POSTACI.setImie(imie);
+                KARTA_POSTACI.setGracz(gracz);
 
 
                 if(correctAtributsSet[0]&&correctAtributsSet[1]&&correctAtributsSet[2]&&
                         correctSkillsSet[0]&&correctSkillsSet[1]&&correctSkillsSet[2]){
 
-                    //Todo do karty postaci
-                    KARTA_POSTACI.setImie(imie);
-                    KARTA_POSTACI.setGracz(gracz);
+                   //TODO na koncu przeniesc wszystko co powyzej
 
-                    db.addKP(KARTA_POSTACI);
+                  //  db.addKP(KARTA_POSTACI);
                     Toast.makeText(rootView.getContext(),"Dodan "+Atut1,Toast.LENGTH_SHORT).show();
                 }
                 else {
