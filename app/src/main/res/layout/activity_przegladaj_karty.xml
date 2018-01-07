@@ -7,12 +7,60 @@
     tools:context="com.wiking.swiatmroku.PrzegladajKarty">
 
 
-    <TextView
-        android:id="@+id/IloscKartWBazie"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="58dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/RelativeInRadio"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/IloscKartWBazie"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_weight="1"
+                    android:text="TextView"
+                    android:textAlignment="center"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="144dp"
+                    tools:layout_editor_absoluteY="13dp" />
+
+                <Button
+                    android:id="@+id/buttonUsun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Usuń"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteY="0dp" />
+
+                <Button
+                    android:id="@+id/buttonOtworz"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otwórz" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/radioGrupsCardsView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </RadioGroup>
+
+        </LinearLayout>
+    </ScrollView>
 
 </android.support.constraint.ConstraintLayout>
