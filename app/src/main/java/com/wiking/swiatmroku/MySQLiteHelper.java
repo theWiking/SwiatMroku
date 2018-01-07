@@ -196,7 +196,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         // 1. get reference to readable DB
         SQLiteDatabase db = this.getReadableDatabase();
         String idString=String.valueOf(id);
-        Log.i("testy",idString );
+       // Log.i("testy",idString );
         // 2. build query  <-----tuprawdopodbnie nie działa
         Cursor cursor;
 
@@ -209,10 +209,11 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                             null, // g. order by
                             null); // h. limit*/
         String sqlQuery = "SELECT * FROM "+TABLE_KARTY_POSTACI+ " WHERE id="+idString;
-        Log.i("testy",sqlQuery);
+       // Log.i("testy",sqlQuery);
         cursor=db.rawQuery(sqlQuery,null);
         // 3. if we got results get the first one
-
+        if(cursor==null)
+            return null;
         if (cursor != null)
             cursor.moveToFirst();
         ///tu juz nie dziala
@@ -221,9 +222,9 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         KartaPostaci KP = new KartaPostaci();
 
 
-      //  KP.setId(Integer.parseInt(cursor.getString(0)));
-        Log.i("testy","Ilosc "+cursor.getCount());
-        Log.i("testy", cursor.getString(1)+"");
+       KP.setId(Integer.parseInt(cursor.getString(0)));
+       // Log.i("testy","Ilosc "+cursor.getCount());
+       // Log.i("testy", cursor.getString(1)+"");
 
 
         KP.setImie(cursor.getString(1));
@@ -332,7 +333,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 
 
         //log
-        Log.d("getKP("+id+")", KP.toString());
+        //Log.d("getKP("+id+")", KP.toString());
 
         // 5. return book
         return KP;
@@ -494,7 +495,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         db.delete(TABLE_KARTY_POSTACI, //table name
                 "id"+" = ?",  // selections
                 new String[] { String.valueOf(KP.getId()) }); //selections args
-
+        Log.i("testy","usuwam "+KP.getId()); // ID Zawsze 0;
         // 3. close
         db.close();
 
@@ -520,4 +521,5 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         cursor.close();
         return counter;
     }
+
 }
