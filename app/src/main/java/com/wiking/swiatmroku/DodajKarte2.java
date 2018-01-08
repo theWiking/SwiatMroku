@@ -2743,6 +2743,8 @@ public class DodajKarte2 extends AppCompatActivity {
                     //Log.i("testy","Imie z bazy danyc:"+kp.getImie()+".");
                     Toast.makeText(rootView.getContext(),"addKP "+ db.iloscKPwBazie(),Toast.LENGTH_SHORT).show();
                     //Toast.makeText(rootView.getContext(),"Nieudane "+Atut1,Toast.LENGTH_SHORT).show();
+                    finish();
+
                 }
             }
         });

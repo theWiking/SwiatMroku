@@ -13,7 +13,10 @@ import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 import java.util.Locale;
 
@@ -43,6 +46,7 @@ public class PrzegladajKarty extends AppCompatActivity {
         RadioGroup rgp= (RadioGroup) findViewById(R.id.radioGrupsCardsView);
         RadioGroup.LayoutParams rprms;
         List<KartaPostaci> AllKP=db.getAllKP();
+        Collections.reverse(AllKP); // odwrotna kolejność
         for (KartaPostaci kp: AllKP
              ) {
             RadioButton radioButton = new RadioButton(this);
@@ -74,6 +78,22 @@ public class PrzegladajKarty extends AppCompatActivity {
                     Intent intent = getIntent();
                     finish();
                     startActivity(intent);
+                }
+            }
+        });
+        otworz=rootView.findViewById(R.id.buttonOtworz);
+        otworz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ktoraWybrana!=0) {
+                    //ToDo otwarcie nowego widoku i przekazanie tam karty postaci lub samego jej id !! (lepiej id samo)
+                    Intent i = new Intent(getApplicationContext(), OgladajKarte.class);
+
+                    i.putExtra("key", ktoraWybrana+"");
+                    Log.i("testy", "" + ktoraWybrana);
+                    Toast.makeText(rootView.getContext(), "" + ktoraWybrana, Toast.LENGTH_SHORT).show();
+                    startActivity(i);
+                    finish();
                 }
             }
         });
