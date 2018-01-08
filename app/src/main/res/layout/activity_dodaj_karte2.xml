@@ -1441,6 +1441,7 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Atut 1"
+                    android:text=""
                     android:inputType="textPersonName" />
 
                 <SeekBar
@@ -1462,6 +1463,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:ems="10"
+                    android:text=""
                     android:hint="Atut 2"
                     android:inputType="textPersonName" />
 

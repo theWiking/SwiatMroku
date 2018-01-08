@@ -2580,10 +2580,6 @@ public class DodajKarte2 extends AppCompatActivity {
                         correctSkillsSet[0]&&correctSkillsSet[1]&&correctSkillsSet[2]){
 
                    //TODO na koncu przeniesc wszystko co powyzej
-
-                }
-                else {
-
                     imie=((EditText) rootView.findViewById(R.id.editTextImie)).getText().toString();
                     wiek=((EditText) rootView.findViewById(R.id.editTextWiek)).getText().toString();
                     gracz=((EditText) rootView.findViewById(R.id.editTextGracz)).getText().toString();
@@ -2646,7 +2642,8 @@ public class DodajKarte2 extends AppCompatActivity {
                     WypMod2=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp2Mod)).getText().toString());
                     WypMod3=Integer.parseInt(((EditText) rootView.findViewById(R.id.editTextWyp3Mod)).getText().toString());
 
-
+                    KARTA_POSTACI.setZdrowieMax(zdrowie);
+                    KARTA_POSTACI.setSilaWoliMax(silaWoli);
 
 
 
@@ -2737,13 +2734,18 @@ public class DodajKarte2 extends AppCompatActivity {
 
                     //Log.i("testy", "Przed "+ db.iloscKPwBazie());
 
-                     db.addKP(KARTA_POSTACI);
+                    db.addKP(KARTA_POSTACI);
                     Log.i("testy", "Po "+ db.iloscKPwBazie());
-                   // KartaPostaci kp =db.getKP(0);
+                    // KartaPostaci kp =db.getKP(0);
                     //Log.i("testy","Imie z bazy danyc:"+kp.getImie()+".");
                     Toast.makeText(rootView.getContext(),"addKP "+ db.iloscKPwBazie(),Toast.LENGTH_SHORT).show();
                     //Toast.makeText(rootView.getContext(),"Nieudane "+Atut1,Toast.LENGTH_SHORT).show();
                     finish();
+
+                }
+                else {
+
+                    Toast.makeText(rootView.getContext(),"Błędne wprowadzenie sprawdź czy wykorzystałeś wszystkie punkty",Toast.LENGTH_SHORT).show();
 
                 }
             }

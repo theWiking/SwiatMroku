@@ -20,15 +20,15 @@ public class KartaPostaci {
     private String frakcja;
     private String nazwaGrupy;
 
-    private int inteligencja;
-    private int czujnosc;
-    private int determinacja;
-    private int sila;
-    private int zrecznosc;
-    private int wytrzymalosc;
-    private int prezentacja;
-    private int manipulacja;
-    private int opanowanie;
+    private int inteligencja=1;
+    private int czujnosc=1;
+    private int determinacja=1;
+    private int sila=1;
+    private int zrecznosc=1;
+    private int wytrzymalosc=1;
+    private int prezentacja=1;
+    private int manipulacja=1;
+    private int opanowanie=1;
 
     private int dedukcja;
     private int informatyka;
@@ -58,15 +58,15 @@ public class KartaPostaci {
     private int zatraszanie;
     private int zwierzeta;
 
-    private String at1Nazwa;
-    private String at2Nazwa;
-    private String at3Nazwa;
-    private String at4Nazwa;
-    private String at5Nazwa;
-    private String at6Nazwa;
-    private String at7Nazwa;
-    private String at8Nazwa;
-    private String at9Nazwa;
+    private String at1Nazwa="";
+    private String at2Nazwa="";
+    private String at3Nazwa="";
+    private String at4Nazwa="";
+    private String at5Nazwa="";
+    private String at6Nazwa="";
+    private String at7Nazwa="";
+    private String at8Nazwa="";
+    private String at9Nazwa="";
 
     private int at1Wartosc;
     private int at2Wartosc;
@@ -78,10 +78,10 @@ public class KartaPostaci {
     private int at8Wartosc;
     private int at9Wartosc;
 
-    private String wada1Nazwa;
-    private String wada2Nazwa;
-    private String wada3Nazwa;
-    private String wada4Nazwa;
+    private String wada1Nazwa="";
+    private String wada2Nazwa="";
+    private String wada3Nazwa="";
+    private String wada4Nazwa="";
     private int wada1Wartosc;
     private int wada2Wartosc;
     private int wada3Wartosc;

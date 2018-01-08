@@ -67,4 +67,27 @@ public class MainActivity extends AppCompatActivity {
         startActivity(przegladajKarty);
     }
 
+    public void onClickExportuj(View view) {
+        Intent intent;
+        intent=new Intent(this,DoZrobienia.class);
+        startActivity(intent);
+    }
+
+    public void onClickImportuj(View view) {
+        Intent intent;
+        intent=new Intent(this,DoZrobienia.class);
+        startActivity(intent);
+    }
+
+    public void onClickOGrze(View view) {
+        Intent intent;
+        intent=new Intent(this,DoZrobienia.class);
+        startActivity(intent);
+    }
+
+    public void onClickAbout(View view) {
+        Intent intent;
+        intent=new Intent(this,DoZrobienia.class);
+        startActivity(intent);
+    }
 }

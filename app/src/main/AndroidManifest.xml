@@ -22,7 +22,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".DodajKarte2" />
         <activity android:name=".PrzegladajKarty" />
-        <activity android:name=".OgladajKarte"></activity>
+        <activity android:name=".OgladajKarte" />
+        <activity android:name=".DoZrobienia"></activity>
     </application>
 
 </manifest>

@@ -43,6 +43,7 @@
             android:layout_below="@+id/ButtonPrzegladajKarty"
             android:layout_centerHorizontal="true"
             android:text="Eksportuj"
+            android:onClick="onClickExportuj"
            />
         <Button
             android:id="@+id/ButtonImportuj"
@@ -51,6 +52,7 @@
             android:layout_below="@+id/ButtonEksportuj"
             android:layout_centerHorizontal="true"
             android:text="Importuj"
+            android:onClick="onClickImportuj"
             />
         <Button
             android:id="@+id/ButtonAboutGame"
@@ -60,6 +62,7 @@
             android:layout_below="@+id/ButtonImportuj"
             android:layout_centerHorizontal="true"
             android:text="O grze"
+            android:onClick="onClickOGrze"
             />
 
         <Button
@@ -69,6 +72,7 @@
 
             android:layout_alignStart="@+id/ButtonAboutGame"
             android:layout_below="@+id/ButtonAboutGame"
-            android:text="About" />
+            android:text="About"
+            android:onClick="onClickAbout"/>
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
